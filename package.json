@@ -32,7 +32,7 @@
       "describe": false,
       "it": false,
       "expect": false,
-      "createRuleChecker": "true"
+      "createRuleChecker": true
     }
   },
   "engines" : {
