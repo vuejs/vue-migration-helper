@@ -9,9 +9,9 @@ module.exports = {
       reason: '$index has been deprecated - you must explicity declare one in the v-for',
       fix: (
         'Rename ' + chalk.red(match) + ' to ' +
-        chalk.green('index') + ' and explicity declare it in the v-for'
+        chalk.green('index') + ' and explicity declare it in v-for'
       ),
-      docsHash: 'index'
+      docsHash: 'v-for-Implicit-index'
     }
   }
 }

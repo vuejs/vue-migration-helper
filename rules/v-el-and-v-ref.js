@@ -4,7 +4,7 @@ var chalk = require('chalk')
 var camelCase = require('lodash/camelCase')
 
 module.exports = {
-  pattern: /\b(v-el|v-ref):([\w-]+)\b/,
+  pattern: /\b(v-el|v-ref):([\w-]+)/,
   warning: function (match, type, name) {
     return {
       reason: 'v-el and v-ref merged into ref attribute',

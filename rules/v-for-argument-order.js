@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /v-for="\(([ijk]|in?d?e?x?),\s*?(\w+)\).+?"/,
+  pattern: /\bv-for="\(([ijk]|in?d?e?x?),\s*?(\w+)\).+?"/,
   warning: function (match, indexVar, itemVar) {
     return {
       reason: 'Argument order for v-for has been updated to match JavaScript conventions',

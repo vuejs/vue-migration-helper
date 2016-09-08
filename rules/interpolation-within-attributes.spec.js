@@ -32,11 +32,35 @@ describe('Rule: interpolation-within-attributes', () => {
     expect(warning.fix).toBe('Update data-foo1-6="{{ url + \'foo\' + bar }}" to v-bind:data-foo1-6="url + \'foo\' + bar"')
   })
 
-  it('matches a partial interpolation', () => {
+  it('matches interpolation with a string prefix', () => {
     const warning = check(`
       <a class="btn-{{ type }}"></a>
     `)
     expect(warning).toBeTruthy()
     expect(warning.fix).toBe('Update class="btn-{{ type }}" to v-bind:class="\'btn-\' + type"')
+  })
+
+  it('matches interpolation with a string suffix', () => {
+    const warning = check(`
+      <a class="{{ type }}-center"></a>
+    `)
+    expect(warning).toBeTruthy()
+    expect(warning.fix).toBe('Update class="{{ type }}-center" to v-bind:class="type + \'-center\'"')
+  })
+
+  it('matches interpolation with both a string prefix and string suffix', () => {
+    const warning = check(`
+      <a class="foo-{{ bar }}-baz"></a>
+    `)
+    expect(warning).toBeTruthy()
+    expect(warning.fix).toBe('Update class="foo-{{ bar }}-baz" to v-bind:class="\'foo-\' + bar + \'-baz\'"')
+  })
+
+  it('matches multiple interpolations', () => {
+    const warning = check(`
+      <a class="btn-{{ type }} btn-{{ size }}"></a>
+    `)
+    expect(warning).toBeTruthy()
+    expect(warning.fix).toBe('Update class="btn-{{ type }} btn-{{ size }}" to use v-bind with a computed property')
   })
 })
