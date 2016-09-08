@@ -1,0 +1,10 @@
+{
+  "spec_dir": ".",
+  "spec_files": [
+    "**/*.spec.js"
+  ],
+  "helpers": [
+    "spec/helpers/**/*.js"
+  ],
+  "stopSpecOnExpectationFailure": true
+}

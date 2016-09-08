@@ -1,0 +1,41 @@
+{
+  "name": "vue-migration-helper",
+  "description": "CLI tool to help migrate Vue 2.0",
+  "author": "Chris Fritz",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "vue-migration-helper": "index.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "JASMINE_CONFIG_PATH=jasmine.json jasmine"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "glob": "^7.0.6",
+    "graceful-fs": "^4.1.6",
+    "lodash": "^4.15.0",
+    "split": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-vue": "git://github.com/vuejs/eslint-config-vue.git#1e91889",
+    "eslint-plugin-vue": "git://github.com/vuejs/eslint-plugin-vue.git#6a3a6db",
+    "jasmine": "2.4.1",
+    "strip-ansi": "^3.0.1"
+  },
+  "eslintConfig": {
+    "extends": "vue",
+    "globals": {
+      "describe": false,
+      "it": false,
+      "expect": false,
+      "createRuleChecker": "true"
+    }
+  },
+  "engines" : {
+    "node" : ">=4.0.0"
+  }
+}
