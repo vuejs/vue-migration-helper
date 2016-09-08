@@ -31,9 +31,7 @@ module.exports = {
         (replacementHook.indexOf(' ') === -1
           ? chalk.green(replacementHook)
           : replacementHook) +
-        (typeof info !== 'undefined'
-          ? info
-          : '')
+        (info || '')
       ),
       docsHash: hook
     }
