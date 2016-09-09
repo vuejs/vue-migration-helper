@@ -14,7 +14,7 @@ module.exports = {
           '.' + name + '-leave-active'
         )
       ),
-      docsHash: 'Vue-config-async'
+      docsHash: 'Transitions'
     }
   }
 }
