@@ -54,12 +54,4 @@ describe('Rule: v-for-argument-order', () => {
     expect(warning).toBeTruthy()
     expect(warning.fix).toBe('Switch argument order in v-for="(ind, item) in items" to (item, ind)')
   })
-
-  it('matches a v-for with ind as first argument', () => {
-    const warning = check(`
-      <p v-for="(ind, item) in items">{{ item }}, {{ ind }}</p>
-    `)
-    expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Switch argument order in v-for="(ind, item) in items" to (item, ind)')
-  })
 })
