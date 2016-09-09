@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /\b([\w-:@\.]+)="(.*?)\{\{(.+?)\}\}(.*?)"/,
+  pattern: /\b([\w-:@\.]+)="([^"=]*?)\{\{(.+?)\}\}([^"=]*?)"/,
   warning: function (match, attribute, prefixString, value, suffixString) {
     return {
       reason: 'Interpolation within attributes has been deprecated',

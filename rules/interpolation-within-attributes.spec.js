@@ -8,6 +8,13 @@ describe('Rule: interpolation-within-attributes', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match interpolations without quotes', () => {
+    const warning = check(`
+      <a href="foo" target={{bar}} class="baz"></a>
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('matches a simple interpolation', () => {
     const warning = check(`
       <a href="{{ url }}"></a>
