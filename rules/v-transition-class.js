@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /(\.([\w-]+)-transition)[\b\W]/,
+  pattern: /(\.([\w-]+)-transition)[^\w-]/,
   warning: function (match, cssClass, name) {
     return {
       reason: 'v-transition class has been deprecated to standardize on the same classes as Angular and React CSSTransitionGroup',

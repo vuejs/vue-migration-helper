@@ -8,7 +8,14 @@ describe('Rule: v-transition-class', () => {
     expect(warning).toBe(null)
   })
 
-  it('matches simple v-transition class', () => {
+  it('does not match v-transition-foo class', () => {
+    const warning = check(`
+      .v-transition-foo {
+    `)
+    expect(warning).toBe(null)
+  })
+
+  it('matches the default v-transition class', () => {
     const warning = check(`
       .v-transition {
     `)
@@ -16,7 +23,7 @@ describe('Rule: v-transition-class', () => {
     expect(warning.fix).toBe('Replace .v-transition with .v-enter-active, .v-leave-active')
   })
 
-  it('matches simple named transition class', () => {
+  it('matches a named transition class', () => {
     const warning = check(`
       .super-fade-transition {
     `)

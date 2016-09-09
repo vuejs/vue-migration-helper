@@ -8,7 +8,14 @@ describe('Rule: v-leave-class', () => {
     expect(warning).toBe(null)
   })
 
-  it('matches simple v-leave class', () => {
+  it('does not match a v-leave-active class', () => {
+    const warning = check(`
+      .v-leave-active {
+    `)
+    expect(warning).toBe(null)
+  })
+
+  it('matches the default v-leave class', () => {
     const warning = check(`
       .v-leave {
     `)
@@ -16,7 +23,7 @@ describe('Rule: v-leave-class', () => {
     expect(warning.fix).toBe('Replace .v-leave with .v-leave-active (if it\'s left over from Vue 1.x)')
   })
 
-  it('matches simple named leave class', () => {
+  it('matches a named leave class', () => {
     const warning = check(`
       .super-fade-leave {
     `)
