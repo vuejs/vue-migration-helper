@@ -8,7 +8,7 @@ module.exports = {
     return {
       reason: 'Filters can now only be used inside text interpolations, e.g. {{ date | formatDate(\'YY-MM-DD\') }}',
       fix: (
-        'Remove filter from ' + chalk.red(directive)
+        'Replace filtered value in ' + chalk.red(directive) + ' with a computed property'
       ),
       docsHash: 'Filters-within-Directives'
     }
