@@ -8,6 +8,48 @@ describe('Rule: array-prototype-remove', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match this.foo.$remove()', () => {
+    const warning = check(`
+      this.foo.$remove()
+    `)
+    expect(warning).toBe(null)
+  })
+
+  it('does not match foo.$remove()', () => {
+    const warning = check(`
+      foo.$remove()
+    `)
+    expect(warning).toBe(null)
+  })
+
+  it('does not match foo.$remove(function () {})', () => {
+    const warning = check(`
+      foo.$remove(function () {})
+    `)
+    expect(warning).toBe(null)
+  })
+
+  it('does not match foo.$remove(() => {}))', () => {
+    const warning = check(`
+      foo.$remove(() => {}))
+    `)
+    expect(warning).toBe(null)
+  })
+
+  it('does not match foo.$remove(() => bar))', () => {
+    const warning = check(`
+      foo.$remove(() => bar))
+    `)
+    expect(warning).toBe(null)
+  })
+
+  it('does not match foo.$remove(bar => bar))', () => {
+    const warning = check(`
+      foo.$remove(bar => bar))
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('matches a simple array remove', () => {
     const warning = check(`
       this.items.$remove(item)

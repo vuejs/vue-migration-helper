@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /([\w+\.]+?)\.\$remove\s*?\((.+?)\)/,
+  pattern: /([\w+\.]+?)\.\$remove\s*?\(([\w\.]+?)\)/,
   warning: function (match, array, itemToRemove) {
     return {
       reason: 'Array extensions for the reactivity system have been deprecated',
