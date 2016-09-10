@@ -6,7 +6,7 @@ module.exports = {
   pattern: /Vue\.config\.delimiters/,
   warning: function (match) {
     return {
-      reason: 'Deprecated, because delimiters are now a component-level option',
+      reason: 'Delimiters are now a component-level option',
       fix: 'Refactor ' + chalk.red('Vue.config.delimiters') + ' to its component-level equivalent',
       docsHash: 'Vue-config-delimiters'
     }

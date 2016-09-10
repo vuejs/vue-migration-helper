@@ -15,7 +15,7 @@ module.exports = {
         ) +
         ' and declare ' + formattedProperty + ' in the data option with an initial value'
       ),
-      docsHash: 'Partials'
+      docsHash: 'Vue-set-and-Vue-delete'
     }
   }
 }

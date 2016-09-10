@@ -6,7 +6,7 @@ module.exports = {
   pattern: /Vue\.config\.unsafeDelimiters/,
   warning: function (match) {
     return {
-      reason: 'Deprecated, because unsafe interpolation has been deprecated',
+      reason: 'Unsafe interpolation has been deprecated',
       fix: 'Delete ' + chalk.red('Vue.config.unsafeDelimiters') + ' and replace all instances of unsafe interpolations with ' + chalk.green('v-html'),
       docsHash: 'Vue-config-unsafeDelimiters'
     }

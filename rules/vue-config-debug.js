@@ -6,7 +6,7 @@ module.exports = {
   pattern: /Vue\.config\.debug/,
   warning: function (match) {
     return {
-      reason: 'Deprecated, since warnings come with stack traces by default now',
+      reason: 'Warnings come with stack traces by default now, making this option redundant',
       fix: 'Delete references to ' + chalk.red('Vue.config.debug'),
       docsHash: 'Vue-config-debug'
     }
