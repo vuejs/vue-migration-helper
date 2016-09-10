@@ -8,7 +8,7 @@
 
 ``` sh
 # install
-npm install --global git://github.com/chrisvfritz/vue-migration-helper-preview.git
+npm install --global git://github.com/chrisvfritz/vue-migration-helper.git
 
 # navigate to a Vue 1.x project directory
 cd path/to/my-vue-project
@@ -25,7 +25,7 @@ While the binary supports Node v4+, tests are written to take advantage of v6+, 
 
 ``` sh
 # clone the project
-git clone https://github.com/chrisvfritz/vue-migration-helper-preview.git
+git clone https://github.com/chrisvfritz/vue-migration-helper.git
 
 # navigate to directory
 cd vue-migration-helper
