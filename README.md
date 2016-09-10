@@ -2,7 +2,7 @@
 
 > Work-in-progress CLI tool to aid in migration from Vue 1.x to 2.0. It scans files for Vue-specific code and provides detailed warnings when deprecated patterns are found.
 
-![Screenshot](http://imgur.com/Wmym4mV)
+![Screenshot](http://i.imgur.com/Wmym4mV.png)
 
 ## Usage
 
