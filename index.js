@@ -16,7 +16,7 @@ glob(folders, {
   nodir: true,
   ignore: [
     'node_modules/**/*',
-    '**/*.+(jpe?g|gif|png|svg|woff2?|ttf|otf|eot)'
+    '**/*.+(jpe?g|gif|png|svg|woff2?|ttf|otf|eot|log)'
   ]
 }, function (error, files) {
   if (error) throw error
