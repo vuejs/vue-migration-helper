@@ -9,7 +9,7 @@ module.exports = {
     const trackBy = trackByBefore || trackByAfter
     const trackByValue = trackByValueBefore || trackByValueAfter
     return {
-      reason: '',
+      reason: 'track-by has been replaced by the key attribute, which conforms with language used by other libraries and behaves the same as other attributes',
       fix: (
         'Update ' + chalk.red(trackBy) + ' to ' +
         chalk.green(
