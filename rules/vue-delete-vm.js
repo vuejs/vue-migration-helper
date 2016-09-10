@@ -3,17 +3,19 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /Vue\.set\(\s*?(this|vm|self)\s*?,([^,]+?),([^,]+?)\)/,
-  warning: function (match, vm, property, value) {
-    const formattedProperty = property.replace(/['"]/g, '').trim()
+  pattern: /Vue\.delete\(\s*?(this|vm|self)\s*?,([^,]+?)\)/,
+  warning: function (match, vm, property) {
     return {
       reason: 'Vue.set and Vue.delete no longer work on Vue instances - it is now mandatory to properly declare all top-level reactive properties in the data option',
       fix: (
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green(
-          vm + '.' + formattedProperty + ' = ' + value.trim()
+          'Vue.delete(' +
+            vm + '.newTopLevelObject, ' +
+            property.trim() +
+          ')'
         ) +
-        ' and declare ' + formattedProperty + ' in the data option with an initial value'
+        ', then scope ' + property.replace(/['"]/g, '').trim() + ' underneath newTopLevelObject, rather than declaring it as a top-level $data property'
       ),
       docsHash: 'Partials'
     }
