@@ -15,6 +15,13 @@ describe('Rule: directive-filters', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match a v-bind with || (or)', () => {
+    const warning = check(`
+      <p v-bind:foo="bar || baz"></p>
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('matches a simple v-model filter', () => {
     const warning = check(`
       <p v-model="foo | bar"></p>
