@@ -10,7 +10,7 @@ module.exports = {
       fix: (
         'Remove filter from ' + chalk.red(directive)
       ),
-      docsHash: 'v-for-Argument-Order'
+      docsHash: 'Filters-within-Directives'
     }
   }
 }
