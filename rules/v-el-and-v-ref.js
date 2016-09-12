@@ -1,7 +1,7 @@
 'use strict'
 
 var chalk = require('chalk')
-var camelCase = require('lodash/camelCase')
+var camelCase = require('lodash.camelCase')
 
 module.exports = {
   pattern: /\b(v-el|v-ref):([\w-]+)/,
