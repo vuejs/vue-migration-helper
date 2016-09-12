@@ -1,4 +1,4 @@
-# vue-migration-helper
+# vue-migration-helper <sup>`ALPHA`</sup>
 
 > __Work-in-progress__ CLI tool to aid in migration from Vue 1.x to 2.0. It scans files for Vue-specific code and provides detailed warnings when deprecated patterns are found.
 
