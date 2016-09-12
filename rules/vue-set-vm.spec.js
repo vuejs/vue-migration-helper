@@ -39,11 +39,11 @@ describe('Rule: vue-set-vm', () => {
     expect(warning.fix).toBe('Replace Vue.set(self, \'foo\', 42) with self.foo = 42 and declare foo in the data option with an initial value')
   })
 
-  it('matches Vue.set(this, "foo.bar.baz", \'hi\')', () => {
+  it('matches vm.$set(this, \'foo\', 42)', () => {
     const warning = check(`
-      Vue.set(self, 'foo.bar.baz', 'hi')
+      vm.$set(this, 'foo', 42)
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace Vue.set(self, \'foo.bar.baz\', \'hi\') with self.foo.bar.baz = \'hi\' and declare foo.bar.baz in the data option with an initial value')
+    expect(warning.fix).toBe('Replace vm.$set(this, \'foo\', 42) with this.foo = 42 and declare foo in the data option with an initial value')
   })
 })

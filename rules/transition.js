@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /<[\w-]+\s+?.*?\b(transition(?:="([\w-]+)")?).*?>/,
+  pattern: /<[\w-]+[^>]*?\s(transition(?:=["']([\w-]+)["'])?)[^>]*?>/,
   warning: function (match, attribute, name) {
     const nameAttribute = name
       ? ' name="' + name + '"'

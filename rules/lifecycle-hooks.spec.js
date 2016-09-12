@@ -8,6 +8,11 @@ describe('Rule: lifecycle-hooks', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match "already"', () => {
+    const warning = check('already:')
+    expect(warning).toBe(null)
+  })
+
   it('matches beforeCompile with ES5 function', () => {
     const warning = check(`
       beforeCompile: function () {

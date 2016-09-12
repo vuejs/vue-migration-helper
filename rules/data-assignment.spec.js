@@ -8,6 +8,13 @@ describe('Rule: data-assignment', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not vm.$data === data', () => {
+    const warning = check(`
+      vm.$data === data
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('matches a simple data assignment', () => {
     const warning = check(`
       this.$data = { a: 'b' }

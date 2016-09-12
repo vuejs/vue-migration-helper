@@ -15,9 +15,23 @@ describe('Rule: transition', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match a transition element with a name that has "transition" in it', () => {
+    const warning = check(`
+      <transition name="demo-transition">
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('does not match a CSS transition property', () => {
     const warning = check(`
       transition: all 1s;
+    `)
+    expect(warning).toBe(null)
+  })
+
+  it('does not match "<p class="tip">It\'s also a good idea to explicitly add `v-bind:css="false"` for JavaScript-only transitions so that Vue can skip the CSS detection. This also prevents CSS rules from accidentally interfering with the transition.</p>"', () => {
+    const warning = check(`
+      <p class="tip">It's also a good idea to explicitly add \`v-bind:css="false"\` for JavaScript-only transitions so that Vue can skip the CSS detection. This also prevents CSS rules from accidentally interfering with the transition.</p>
     `)
     expect(warning).toBe(null)
   })

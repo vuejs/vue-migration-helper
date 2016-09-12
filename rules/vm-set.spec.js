@@ -8,35 +8,42 @@ describe('Rule: vm-set', () => {
     expect(warning).toBe(null)
   })
 
-  it('matches this.$set(args)', () => {
+  it('does not match this.$set(obj, \'foo\', 42)', () => {
     const warning = check(`
-      this.$set(args)
+      this.$set(obj, 'foo', 42)
     `)
-    expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace this.$set(args) with Vue.set(args)')
+    expect(warning).toBe(null)
   })
 
-  it('matches vm.$set(args)', () => {
+  it('matches this.$set(\'foo.bar\', 42)', () => {
     const warning = check(`
-      vm.$set(args)
+      this.$set('foo.bar', 42)
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace vm.$set(args) with Vue.set(args)')
+    expect(warning.fix).toBe('Replace this.$set(\'foo.bar\', 42) with this.$set(this.foo, \'bar\', 42)')
   })
 
-  it('matches self.$set(args)', () => {
+  it('matches this.$set(\'foo.bar.baz\', 42)', () => {
     const warning = check(`
-      self.$set(args)
+      this.$set('foo.bar.baz', 42)
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace self.$set(args) with Vue.set(args)')
+    expect(warning.fix).toBe('Replace this.$set(\'foo.bar.baz\', 42) with this.$set(this.foo.bar, \'baz\', 42)')
   })
 
-  it('matches this.$set(many, \'different\', args)', () => {
+  it('matches vm.$set(\'foo.bar.baz\', 42)', () => {
     const warning = check(`
-      this.$set(many, 'different', args)
+      vm.$set('foo.bar.baz', 42)
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace this.$set(many, \'different\', args) with Vue.set(many, \'different\', args)')
+    expect(warning.fix).toBe('Replace vm.$set(\'foo.bar.baz\', 42) with vm.$set(vm.foo.bar, \'baz\', 42)')
+  })
+
+  it('matches self.$set(\'foo.bar.baz\', 42)', () => {
+    const warning = check(`
+      self.$set('foo.bar.baz', 42)
+    `)
+    expect(warning).toBeTruthy()
+    expect(warning.fix).toBe('Replace self.$set(\'foo.bar.baz\', 42) with self.$set(self.foo.bar, \'baz\', 42)')
   })
 })

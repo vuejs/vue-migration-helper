@@ -8,6 +8,20 @@ describe('Rule: lazy-and-number-params', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match v-model.number="foo"', () => {
+    const warning = check(`
+      v-model.number="foo"
+    `)
+    expect(warning).toBe(null)
+  })
+
+  it('does not match an input with type="number"', () => {
+    const warning = check(`
+      <input v-model="foo" type="number">
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('matches a simple number param', () => {
     const warning = check(`
       <input v-model="foo" number>

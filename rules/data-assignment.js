@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /[\w+\.]+?\.\$data\s*?=[^\n]+/,
+  pattern: /[\w+\.]+?\.\$data\s*?=[^=][^\n]+/,
   warning: function (match) {
     return {
       reason: 'Replacing $data is now longer allowed, as it often has unintended side effects',

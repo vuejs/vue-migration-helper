@@ -3,8 +3,8 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /Vue\.set\(\s*?(this|vm|self)\s*?,([^,]+?),([^,]+?)\)/,
-  warning: function (match, vm, property, value) {
+  pattern: /(Vue\.set|(?:this|vm|self)\.\$set)\(\s*?(this|vm|self)\s*?,([^,]+?),([^,]+?)\)/,
+  warning: function (match, command, vm, property, value) {
     const formattedProperty = property.replace(/['"]/g, '').trim()
     return {
       reason: 'Vue.set and Vue.delete no longer work on Vue instances - it is now mandatory to properly declare all top-level reactive properties in the data option',
