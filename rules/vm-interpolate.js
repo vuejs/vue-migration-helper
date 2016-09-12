@@ -3,14 +3,14 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /(this|vm|self)\.\$eval\s*?\(\s*?["'`](.+?)["'`]\s*?\)/,
+  pattern: /(this|vm|self)\.\$interpolate\s*?\(\s*?["'`](.+?)["'`]\s*?\)/,
   warning: function (match, vm, property) {
     return {
-      reason: 'vm.$eval has been deprecated, as it has no real use',
+      reason: 'vm.$interpolate has been deprecated, as it has no real use',
       fix: (
         'Replace ' + chalk.red(match) + ' with a solution using normal JavaScript'
       ),
-      docsHash: 'vm-eval'
+      docsHash: 'vm-interpolate'
     }
   }
 }
