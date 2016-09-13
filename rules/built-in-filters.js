@@ -26,7 +26,7 @@ module.exports = {
         .replace(/\$filter/g, filter)
         .replace(/\$green\{(.+?)\}/g, chalk.green('$1'))
         .replace(/\$red\{(.+?)\}/g, chalk.red('$1')),
-      docsHash: 'Array-prototype-set'
+      docsHash: 'Built-In-Text-Filters'
     }
   }
 }
