@@ -14,7 +14,7 @@ module.exports = {
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green(vm + property + ' = null')
       ),
-      docsHash: 'vm-set'
+      docsHash: 'vm-delete'
     }
   }
 }
