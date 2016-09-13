@@ -17,8 +17,9 @@ var folders = args.length
 glob(folders, {
   nodir: true,
   ignore: [
-    'node_modules/**/*',
-    '**/*.+(jpe?g|gif|png|svg|woff2?|ttf|otf|eot|log)'
+    '**/.git/**/*',
+    '**/node_modules/**/*',
+    '**/*.+(jpe?g|gif|png|svg|woff2?|ttf|otf|eot|log|zip|map)'
   ]
 }, function (error, files) {
   if (error) throw error

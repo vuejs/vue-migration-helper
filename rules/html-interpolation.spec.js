@@ -23,4 +23,12 @@ describe('Rule: html-interpolation', () => {
     expect(warning).toBeTruthy()
     expect(warning.fix).toBe('Replace {{{ foo }}} with v-html="foo" on a containing element')
   })
+
+  it('matches an interpolation with two on the same line', () => {
+    const warning = check(`
+      {{{ foo }}} bar {{{ baz }}}
+    `)
+    expect(warning).toBeTruthy()
+    expect(warning.fix).toBe('Replace {{{ foo }}} with v-html="foo" on a containing element')
+  })
 })
