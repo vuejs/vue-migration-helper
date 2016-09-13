@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /{{{\s*?(.+)\s*?}}}/,
+  pattern: /\{\{\{\s*?(.+)\s*?\}\}\}/,
   warning: function (match, interpolationContents) {
     return {
       reason: 'HTML interpolation with {{{ }}} has been deprecated',
