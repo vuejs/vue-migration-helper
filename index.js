@@ -9,7 +9,9 @@ var checkForDeprecations = require('./helpers/check-for-deprecations')
 
 var args = process.argv.slice(2)
 var folders = args.length
-  ? '+(' + args.join('|') + ')/**/*'
+  ? args.length === 1
+    ? args + '/**/*'
+    : '{' + args.join(',') + '}/**/*'
   : '**/*'
 
 glob(folders, {
