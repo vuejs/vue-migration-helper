@@ -1,6 +1,6 @@
-# vue-migration-helper <sup>`ALPHA`</sup>
+# vue-migration-helper <sup>`BETA`</sup>
 
-> __Work-in-progress__ CLI tool to aid in migration from Vue 1.x to 2.0. It scans files for Vue-specific code and provides detailed warnings when deprecated patterns are found.
+> CLI tool to aid in migration from Vue 1.x to 2.0. It scans files for Vue-specific code and provides detailed warnings when deprecated patterns are found.
 
 ![Screenshot](http://i.imgur.com/aHh5TfR.png)
 
@@ -17,6 +17,12 @@ cd path/to/my-vue-project
 vue-migration-helper
 # scan all files in specific sub-directories
 vue-migration-helper src folder-a folder-b
+```
+
+When you want to update, just run the install again:
+
+``` sh
+npm install --global git://github.com/vuejs/vue-migration-helper.git
 ```
 
 ## Contributing
