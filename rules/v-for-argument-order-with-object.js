@@ -11,7 +11,7 @@ module.exports = {
         'Switch argument order in ' + chalk.red(match) + ' to ' +
         chalk.green('(' + valueVar + ', ' + keyVar + ')')
       ),
-      docsHash: 'v-for-Argument-Order'
+      docsHash: 'v-for-Argument-Order-for-Objects'
     }
   }
 }

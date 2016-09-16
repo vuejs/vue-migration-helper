@@ -12,7 +12,7 @@ module.exports = {
         chalk.green(vBindPrefix + boundProp + '=' + value) +
         ', then make ' + boundProp + ' the initial value of a data property'
       ),
-      docsHash: 'v-bind-sync-and-once-modifiers'
+      docsHash: 'v-bind-with-once-and-sync-Modifiers-deprecated'
     }
   }
 }

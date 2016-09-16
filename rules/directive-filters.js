@@ -10,7 +10,7 @@ module.exports = {
       fix: (
         'Replace filtered value in ' + chalk.red(directive) + ' with a computed property'
       ),
-      docsHash: 'Filters-within-Directives'
+      docsHash: 'Filters-Outside-Text-Interpolations-deprecated'
     }
   }
 }

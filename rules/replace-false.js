@@ -13,7 +13,7 @@ module.exports = {
         ' with ' +
         chalk.green('template: \'<div id="app"> ... </div>\'')
       ),
-      docsHash: 'replace-false'
+      docsHash: 'replace-false-deprecated'
     }
   }
 }

@@ -10,7 +10,7 @@ module.exports = {
       fix: (
         'Replace ' + chalk.red('Vue.partial(' + name + ')') + ' with a functional component'
       ),
-      docsHash: 'Partials'
+      docsHash: 'Vue-partial-deprecated'
     }
   }
 }

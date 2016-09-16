@@ -14,7 +14,7 @@ module.exports = {
         'Rename ' + chalk.red(match) + ' to ' +
         chalk.green(match.slice(1)) + ' and explicity declare it (e.g. ' + exampleVFor + ')'
       ),
-      docsHash: 'v-for-Implicit-index-and-key'
+      docsHash: 'index-and-key-deprecated'
     }
   }
 }

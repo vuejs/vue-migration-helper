@@ -12,7 +12,7 @@ module.exports = {
         chalk.green('v-html="' + interpolationContents.trim() + '"') +
         ' on a containing element'
       ),
-      docsHash: 'HTML-Interpolation'
+      docsHash: 'HTML-Interpolation-deprecated'
     }
   }
 }

@@ -14,7 +14,7 @@ module.exports = {
           '.' + name + '-leave-active'
         )
       ),
-      docsHash: 'Transitions'
+      docsHash: 'transition-Attribute-deprecated'
     }
   }
 }

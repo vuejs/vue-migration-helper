@@ -16,7 +16,7 @@ module.exports = {
         chalk.green('<transition-group' + nameAttribute + '>') +
         ' wrapper component'
       ),
-      docsHash: 'Transitions'
+      docsHash: 'transition-Attribute-deprecated'
     }
   }
 }

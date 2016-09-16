@@ -10,7 +10,7 @@ module.exports = {
       fix: (
         'Replace ' + chalk.red('Vue.elementDirective(' + name + ')') + ' with a component'
       ),
-      docsHash: 'Element-Directives'
+      docsHash: 'Vue-elementDirective-deprecated'
     }
   }
 }

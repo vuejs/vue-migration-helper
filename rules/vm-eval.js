@@ -10,7 +10,7 @@ module.exports = {
       fix: (
         'Replace ' + chalk.red(match) + ' with a solution using normal JavaScript'
       ),
-      docsHash: 'vm-eval'
+      docsHash: 'vm-eval-deprecated'
     }
   }
 }

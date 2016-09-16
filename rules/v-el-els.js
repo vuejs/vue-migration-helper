@@ -11,7 +11,7 @@ module.exports = {
         'Update ' + chalk.red(match) + ' to ' +
         chalk.green(vm + '.$refs' + (el || ''))
       ),
-      docsHash: 'vm-el-and-v-ref'
+      docsHash: 'v-el-and-v-ref-deprecated'
     }
   }
 }

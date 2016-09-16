@@ -14,7 +14,7 @@ module.exports = {
           array + '.splice(index, 1)'
         )
       ),
-      docsHash: 'Array-prototype-remove'
+      docsHash: 'Array-prototype-remove-deprecated'
     }
   }
 }

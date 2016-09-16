@@ -11,7 +11,7 @@ module.exports = {
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green(name + preLiteralStuff + postLiteralStuff + '="\'' + value + '\'"')
       ),
-      docsHash: 'literal-Modifier'
+      docsHash: 'Custom-Directives'
     }
   }
 }

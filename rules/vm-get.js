@@ -13,7 +13,7 @@ module.exports = {
           vm + '.' + property
         )
       ),
-      docsHash: 'vm-set'
+      docsHash: 'vm-get-deprecated'
     }
   }
 }

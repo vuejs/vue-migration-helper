@@ -17,7 +17,7 @@ module.exports = {
         ) +
         ', then scope ' + property.replace(/['"]/g, '').trim() + ' underneath newTopLevelObject, rather than declaring it as a top-level $data property'
       ),
-      docsHash: 'Vue-set-and-Vue-delete'
+      docsHash: 'Vue-set-and-Vue-delete-on-Vue-instances-deprecated'
     }
   }
 }

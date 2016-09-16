@@ -17,7 +17,7 @@ module.exports = {
           ')'
         )
       ),
-      docsHash: 'Array-prototype-set'
+      docsHash: 'Array-prototype-set-deprecated'
     }
   }
 }

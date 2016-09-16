@@ -12,7 +12,7 @@ module.exports = {
         chalk.green('v-once="' + binding.trim() + '"') +
         ' on a containing element'
       ),
-      docsHash: 'One-Time-Bindings'
+      docsHash: 'One-Time-Bindings-deprecated'
     }
   }
 }

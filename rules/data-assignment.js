@@ -11,7 +11,7 @@ module.exports = {
         'Instead of replacing $data with ' + chalk.red(match) +
         ', update individual properties or scope all the properties you want to update under a new object property, then replace that object'
       ),
-      docsHash: 'data-Assignment'
+      docsHash: 'Replacing-vm-data-deprecated'
     }
   }
 }

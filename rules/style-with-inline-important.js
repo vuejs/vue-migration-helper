@@ -10,7 +10,7 @@ module.exports = {
       fix: (
         'Remove !important from ' + chalk.red(match)
       ),
-      docsHash: 'Bound-style-Attribute-with-Inline-important'
+      docsHash: 'v-bind-style-with-Object-Syntax-and-important-deprecated'
     }
   }
 }

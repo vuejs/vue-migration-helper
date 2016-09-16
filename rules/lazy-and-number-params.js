@@ -14,7 +14,7 @@ module.exports = {
           vModelAttr + '.' + param + '="' + vModelValue + '"'
         )
       ),
-      docsHash: 'lazy-and-number-params'
+      docsHash: 'v-model-with-lazy-or-number-Param-Attributes-deprecated'
     }
   }
 }

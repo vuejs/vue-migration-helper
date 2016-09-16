@@ -6,7 +6,7 @@ module.exports = {
     return {
       reason: 'Prop coercion has been deprecated in favor of local computed properties',
       fix: 'Replace prop coercion with a local computed property',
-      docsHash: 'Prop-Coercion'
+      docsHash: 'coerce-Prop-Option-deprecated'
     }
   }
 }

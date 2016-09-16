@@ -18,7 +18,7 @@ module.exports = {
           '"'
         )
       ),
-      docsHash: 'track-by'
+      docsHash: 'track-by-deprecated'
     }
   }
 }

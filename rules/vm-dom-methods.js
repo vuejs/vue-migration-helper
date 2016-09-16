@@ -20,7 +20,7 @@ module.exports = {
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green(replacement)
       ),
-      docsHash: 'vm-DOM-Methods'
+      docsHash: 'vm-' + method + '-deprecated'
     }
   }
 }

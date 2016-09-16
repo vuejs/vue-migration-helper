@@ -11,7 +11,7 @@ module.exports = {
         'Refactor ' + chalk.red('keep-alive') + ' attribute ' +
         'to a ' + chalk.green('<keep-alive></keep-alive>') + ' wrapper component'
       ),
-      docsHash: 'keep-alive-Attribute'
+      docsHash: 'keep-alive-Attribute-deprecated'
     }
   }
 }

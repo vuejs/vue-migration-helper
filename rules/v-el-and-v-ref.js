@@ -12,7 +12,7 @@ module.exports = {
         'Update ' + chalk.red(match) + ' to ' +
         chalk.green('ref="' + camelCase(name) + '"')
       ),
-      docsHash: 'v-el-and-v-ref'
+      docsHash: 'v-el-and-v-ref-deprecated'
     }
   }
 }

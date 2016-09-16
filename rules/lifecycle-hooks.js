@@ -33,7 +33,7 @@ module.exports = {
           : replacementHook) +
         (info || '')
       ),
-      docsHash: hook
+      docsHash: hook + '-deprecated'
     }
   }
 }

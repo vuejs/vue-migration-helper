@@ -10,7 +10,7 @@ module.exports = {
       fix: (
         'Delete ' + chalk.red(match) + ', then $emit an event from the child component to trigger an update to the prop in the parent'
       ),
-      docsHash: 'twoWay-true'
+      docsHash: 'twoWay-Prop-Option-deprecated'
     }
   }
 }
