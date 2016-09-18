@@ -1,12 +1,12 @@
 'use strict'
 
-var fs = require('graceful-fs')
+var recursiveReadSync = require('recursive-readdir-sync')
 var path = require('path')
 var assertRule = require('./assert-rule')
 var reportWarning = require('./report-warning')
 
 var rulesPath = path.join(__dirname, '../rules')
-var rules = fs.readdirSync(rulesPath)
+var rules = recursiveReadSync(rulesPath)
   .filter(function (file) {
     return file.indexOf('.spec') === -1
   })

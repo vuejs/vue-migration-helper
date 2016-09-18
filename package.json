@@ -17,6 +17,7 @@
     "glob": "^7.0.6",
     "graceful-fs": "^4.1.6",
     "lodash.camelcase": "^4.3.0",
+    "recursive-readdir-sync": "^1.0.6",
     "split": "^1.0.0"
   },
   "devDependencies": {
