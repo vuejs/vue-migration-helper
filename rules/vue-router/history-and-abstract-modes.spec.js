@@ -36,4 +36,12 @@ describe('Rule: history-and-abstract-modes', () => {
     expect(warning).toBeTruthy()
     expect(warning.fix).toBe('Replace history : true with mode : \'history\'')
   })
+
+  it('matches "abstract: true,"', () => {
+    const warning = check(`
+      abstract: true,
+    `)
+    expect(warning).toBeTruthy()
+    expect(warning.fix).toBe('Replace abstract: true with mode: \'abstract\'')
+  })
 })
