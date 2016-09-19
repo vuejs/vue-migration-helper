@@ -16,3 +16,12 @@ describe('scanning directory with an empty file', () => {
   })
 })
 
+describe('scanning directory with a simple js file', () => {
+  it('completes without error', () => {
+    const result = runMigrationHelper(['simple'])
+    expect(result.error).toBe(undefined)
+    expect(result.stderr).toBe('')
+    expect(result.stdout).toContain('1. ')
+  })
+})
+
