@@ -33,7 +33,8 @@
       "describe": false,
       "it": false,
       "expect": false,
-      "createRuleChecker": true
+      "createRuleChecker": true,
+      "runMigrationHelper": true
     }
   },
   "engines": {
