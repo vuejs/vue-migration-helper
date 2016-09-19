@@ -8,10 +8,13 @@ var reportWarning = require('./report-warning')
 var rulesPath = path.join(__dirname, '../rules')
 var rules = recursiveReadSync(rulesPath)
   .filter(function (file) {
-    return file.indexOf('.spec') === -1
+    return (
+      file.indexOf('.js') === file.length - 3 &&
+      file.indexOf('.spec') === -1
+    )
   })
   .map(function (file) {
-    return require(path.join(rulesPath, file))
+    return require(file)
   })
 
 module.exports = function (fileData) {
