@@ -13,9 +13,7 @@ var rules = recursiveReadSync(rulesPath)
       file.indexOf('.spec') === -1
     )
   })
-  .map(function (file) {
-    return require(file)
-  })
+  .map(require)
 
 module.exports = function (fileData) {
   rules.some(function (rule) {
