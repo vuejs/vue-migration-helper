@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /Vue\.elementDirective\(\s*?(['"`].+?['"`])/,
+  pattern: /Vue\.elementDirective\s*\(\s*(['"`].+['"`])/,
   warning: function (match, name) {
     return {
       reason: 'Element directives have been deprecated in favor of components',

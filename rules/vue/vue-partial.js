@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /Vue\.partial\(\s*?(['"`].+?['"`])/,
+  pattern: /Vue\.partial\s*\(\s*(['"`].+['"`])/,
   warning: function (match, name) {
     return {
       reason: 'Partials have been deprecated in favor of functional components',
