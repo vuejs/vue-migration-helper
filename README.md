@@ -35,6 +35,9 @@ git clone https://github.com/vuejs/vue-migration-helper.git
 
 # navigate to directory
 cd vue-migration-helper
+
+# install the dependencies
+npm install
 ```
 
 Then write a failing test for a rule you'd like to improve. Confirm that it fails with:
