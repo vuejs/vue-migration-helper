@@ -7,7 +7,7 @@ var glob = require('glob')
 var split = require('split')
 
 var checkForDeprecations = require('./helpers/check-for-deprecations')
-var trackStats = require('./helpers/track-stats')
+var reportStats = require('./helpers/report-stats')
 
 var args = process.argv.slice(2)
 var folders = args.length ? args.length === 1 ? args + '/**/*' : '{' + args.join(',') + '}/**/*' : '**/*'
@@ -39,5 +39,5 @@ glob(folders, {
         })
     })
   })
-  trackStats(proms)
+  reportStats(proms)
 })
