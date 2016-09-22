@@ -21,23 +21,23 @@ glob(folders, {
   ]
 }, function (error, files) {
   if (error) throw error
-  var proms = files.map(function (file) {
+  var filesChecking = files.map(function (file) {
     return new Promise(function (resolve, reject) {
       var lineNum = 0
-      var errorsCount = 0
+      var warningsCount = 0
       fs.createReadStream(file)
         .pipe(split())
         .on('data', function (line) {
-          errorsCount += checkForDeprecations({
+          warningsCount += checkForDeprecations({
             line: line,
             lineNum: ++lineNum,
             file: file
           }) ? 1 : 0
         })
         .on('end', function () {
-          resolve(errorsCount)
+          resolve(warningsCount)
         })
     })
   })
-  reportStats(proms)
+  reportStats(filesChecking)
 })
