@@ -12,7 +12,7 @@ describe('scanning directory with an empty file', () => {
     const result = runMigrationHelper(['empty-file'])
     expect(result.error).toBe(undefined)
     expect(result.stderr).toBe('')
-    expect(result.stdout).toBe('')
+    expect(result.stdout).toContain('✓ Project\'s files don\'t use deprecated patterns.')
   })
 })
 
@@ -22,6 +22,7 @@ describe('scanning directory with a simple js file', () => {
     expect(result.error).toBe(undefined)
     expect(result.stderr).toBe('')
     expect(result.stdout).toContain('1. ')
+    expect(result.stdout).toContain('✖ 1 deprecated patterns detected in 1 out of 1 project\'s files.')
   })
 })
 
