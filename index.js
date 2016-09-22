@@ -6,12 +6,13 @@ var glob = require('glob')
 var split = require('split')
 
 var checkForDeprecations = require('./helpers/check-for-deprecations')
+var trackStats = require('./helpers/track-stats')
 
 var args = process.argv.slice(2)
 var folders = args.length
   ? args.length === 1
-    ? args + '/**/*'
-    : '{' + args.join(',') + '}/**/*'
+  ? args + '/**/*'
+  : '{' + args.join(',') + '}/**/*'
   : '**/*'
 
 glob(folders, {
@@ -25,15 +26,23 @@ glob(folders, {
   if (error) throw error
   files.forEach(function (file) {
     var lineNum = 0
-    fs.createReadStream(file)
+    var errorsCount = 0
+    var stream = fs.createReadStream(file)
       .pipe(split())
       .on('data', function (line) {
         lineNum++
-        checkForDeprecations({
+        var hasErrors = checkForDeprecations({
           line: line,
           lineNum: lineNum,
           file: file
         })
+        if (hasErrors) {
+          errorsCount++
+        }
       })
+
+    stream.on('end', function () {
+      trackStats(errorsCount, files.length)
+    })
   })
 })
