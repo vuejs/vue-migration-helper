@@ -8,7 +8,7 @@ module.exports = {
     return {
       reason: 'Filters can now only be used inside text interpolations, e.g. {{ date | formatDate(\'YY-MM-DD\') }}',
       fix: (
-        'Replace filtered value in ' + chalk.red(directive) + ' with a computed property'
+        'Replace filtered value in ' + chalk.red(directive) + ' with a method or computed property'
       ),
       docsHash: 'Filters-Outside-Text-Interpolations-deprecated'
     }
