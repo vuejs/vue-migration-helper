@@ -27,7 +27,7 @@ describe('Rule: directive-filters', () => {
       <p v-model="foo | bar"></p>
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace filtered value in v-model="foo | bar" with a computed property')
+    expect(warning.fix).toBe('Replace filtered value in v-model="foo | bar" with a method or computed property')
   })
 
   it('matches a simple v-on filter', () => {
@@ -35,7 +35,7 @@ describe('Rule: directive-filters', () => {
       <p v-on:keyup.enter="foo | bar"></p>
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace filtered value in v-on:keyup.enter="foo | bar" with a computed property')
+    expect(warning.fix).toBe('Replace filtered value in v-on:keyup.enter="foo | bar" with a method or computed property')
   })
 
   it('matches a simple v-on shorthand filter', () => {
@@ -43,7 +43,7 @@ describe('Rule: directive-filters', () => {
       <p @keyup.enter="foo | bar"></p>
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace filtered value in @keyup.enter="foo | bar" with a computed property')
+    expect(warning.fix).toBe('Replace filtered value in @keyup.enter="foo | bar" with a method or computed property')
   })
 
   it('matches a simple v-bind shorthand filter', () => {
@@ -51,7 +51,7 @@ describe('Rule: directive-filters', () => {
       <p :foo="bar | baz"></p>
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace filtered value in :foo="bar | baz" with a computed property')
+    expect(warning.fix).toBe('Replace filtered value in :foo="bar | baz" with a method or computed property')
   })
 
   it('matches a v-for filter with an argument', () => {
@@ -59,7 +59,7 @@ describe('Rule: directive-filters', () => {
       <p v-for="item in items | formatDate 'YY-MM-DD'"></p>
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace filtered value in v-for="item in items | formatDate \'YY-MM-DD\'" with a computed property')
+    expect(warning.fix).toBe('Replace filtered value in v-for="item in items | formatDate \'YY-MM-DD\'" with a method or computed property')
   })
 
   it('matches chained v-for filters', () => {
@@ -67,6 +67,6 @@ describe('Rule: directive-filters', () => {
       <p v-for="item in items | foo bar | baz bez"></p>
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace filtered value in v-for="item in items | foo bar | baz bez" with a computed property')
+    expect(warning.fix).toBe('Replace filtered value in v-for="item in items | foo bar | baz bez" with a method or computed property')
   })
 })
