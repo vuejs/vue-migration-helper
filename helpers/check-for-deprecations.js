@@ -16,12 +16,15 @@ var rules = recursiveReadSync(rulesPath)
   .map(require)
 
 module.exports = function (fileData) {
+  var hasWarnings = false
   rules.some(function (rule) {
     var warning = assertRule(fileData, rule)
     if (warning) {
       reportWarning(fileData, warning)
+      hasWarnings = true
       return true
     }
-    return false
   })
+
+  return hasWarnings
 }

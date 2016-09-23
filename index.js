@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 'use strict'
 
 var fs = require('graceful-fs')
@@ -6,13 +7,10 @@ var glob = require('glob')
 var split = require('split')
 
 var checkForDeprecations = require('./helpers/check-for-deprecations')
+var reportStats = require('./helpers/report-stats')
 
 var args = process.argv.slice(2)
-var folders = args.length
-  ? args.length === 1
-    ? args + '/**/*'
-    : '{' + args.join(',') + '}/**/*'
-  : '**/*'
+var folders = args.length ? args.length === 1 ? args + '/**/*' : '{' + args.join(',') + '}/**/*' : '**/*'
 
 glob(folders, {
   nodir: true,
@@ -23,17 +21,23 @@ glob(folders, {
   ]
 }, function (error, files) {
   if (error) throw error
-  files.forEach(function (file) {
-    var lineNum = 0
-    fs.createReadStream(file)
-      .pipe(split())
-      .on('data', function (line) {
-        lineNum++
-        checkForDeprecations({
-          line: line,
-          lineNum: lineNum,
-          file: file
+  var filesChecking = files.map(function (file) {
+    return new Promise(function (resolve, reject) {
+      var lineNum = 0
+      var warningsCount = 0
+      fs.createReadStream(file)
+        .pipe(split())
+        .on('data', function (line) {
+          warningsCount += checkForDeprecations({
+            line: line,
+            lineNum: ++lineNum,
+            file: file
+          }) ? 1 : 0
         })
-      })
+        .on('end', function () {
+          resolve(warningsCount)
+        })
+    })
   })
+  reportStats(filesChecking)
 })
