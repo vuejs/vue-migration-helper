@@ -16,7 +16,7 @@ var rules = recursiveReadSync(rulesPath)
   .map(require)
 
 module.exports = function (fileData) {
-  rules.some(function (rule) {
+  return rules.some(function (rule) {
     var warning = assertRule(fileData, rule)
     if (warning) {
       reportWarning(fileData, warning)

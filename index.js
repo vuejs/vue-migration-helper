@@ -6,6 +6,7 @@ var glob = require('glob')
 var split = require('split')
 
 var checkForDeprecations = require('./helpers/check-for-deprecations')
+var printSummary = require('./helpers/print-summary')
 
 var args = process.argv.slice(2)
 var folders = args.length
@@ -23,17 +24,31 @@ glob(folders, {
   ]
 }, function (error, files) {
   if (error) throw error
-  files.forEach(function (file) {
-    var lineNum = 0
-    fs.createReadStream(file)
-      .pipe(split())
-      .on('data', function (line) {
-        lineNum++
-        checkForDeprecations({
-          line: line,
-          lineNum: lineNum,
-          file: file
+  var deprecationsFound = false
+  var fileChecks = files.map(function (file) {
+    return new Promise(function (resolve, reject) {
+      var lineNum = 0
+      fs.createReadStream(file)
+        .pipe(split())
+        .on('data', function (line) {
+          lineNum++
+          var lineHasDeprecation = checkForDeprecations({
+            line: line,
+            lineNum: lineNum,
+            file: file
+          })
+          if (lineHasDeprecation) {
+            deprecationsFound = true
+          }
         })
-      })
+        .on('end', resolve)
+    })
   })
+  Promise.all(fileChecks)
+    .then(function () {
+      printSummary(deprecationsFound)
+    })
+    .catch(function (error) {
+      throw error
+    })
 })
