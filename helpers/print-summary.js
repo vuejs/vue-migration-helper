@@ -1,7 +1,7 @@
 'use strict'
 
 var chalk = require('chalk')
-var migrationGuideUrl = require('../config/migration-guide-url')
+var migrationGuideUrlFor = require('./migration-guide-url-for')
 
 module.exports = function (deprecationsFound) {
   if (!deprecationsFound) {
@@ -14,6 +14,6 @@ module.exports = function (deprecationsFound) {
       'Note however that only about 80% of deprecations are detectable with this utility. See the migration guide for the rest:'
     ))
     console.log()
-    console.log(chalk.blue.underline(migrationGuideUrl))
+    console.log(chalk.blue.underline(migrationGuideUrlFor('vue')))
   }
 }

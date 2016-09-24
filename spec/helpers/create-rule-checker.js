@@ -1,6 +1,6 @@
 'use strict'
 
-global.createRuleChecker = function (ruleName) {
+global.createRuleChecker = ruleName => {
   const stripAnsi = require('strip-ansi')
   const assertRule = require('../../helpers/assert-rule')
 

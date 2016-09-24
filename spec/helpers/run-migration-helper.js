@@ -3,7 +3,7 @@
 const path = require('path')
 const spawnSync = require('child_process').spawnSync
 
-global.runMigrationHelper = function (folders) {
+global.runMigrationHelper = folders => {
   const results = spawnSync(
     path.join(__dirname, '../../index.js'),
     folders.map(folder => 'spec/fixtures/projects/' + folder),

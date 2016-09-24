@@ -11,7 +11,7 @@ module.exports = {
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green('mode' + spaceBeforeColon + ':' + spaceAfterColon + '\'' + mode + '\'')
       ),
-      docsHash: 'replace-false-deprecated'
+      docsHash: ''
     }
   }
 }

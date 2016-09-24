@@ -30,11 +30,15 @@
   "eslintConfig": {
     "extends": "vue",
     "globals": {
+      "jasmine": false,
       "describe": false,
+      "fdescribe": false,
       "it": false,
+      "fit": false,
       "expect": false,
       "createRuleChecker": true,
-      "runMigrationHelper": true
+      "runMigrationHelper": true,
+      "catchLog": true
     }
   },
   "engines": {
