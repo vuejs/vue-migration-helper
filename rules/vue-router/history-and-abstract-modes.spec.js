@@ -44,4 +44,20 @@ describe('Rule: history-and-abstract-modes', () => {
     expect(warning).toBeTruthy()
     expect(warning.fix).toBe('Replace abstract: true with mode: \'abstract\'')
   })
+
+  it('sets the correct docsHash for history: true', () => {
+    const warning = check(`
+      history: true,
+    `)
+    expect(warning).toBeTruthy()
+    expect(warning.docsHash).toBe('history-true-deprecated')
+  })
+
+  it('sets the correct docsHash for abstract: true', () => {
+    const warning = check(`
+      abstract: true,
+    `)
+    expect(warning).toBeTruthy()
+    expect(warning.docsHash).toBe('abstract-true-deprecated')
+  })
 })
