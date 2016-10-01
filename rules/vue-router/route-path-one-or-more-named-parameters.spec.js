@@ -8,6 +8,11 @@ describe('Rule: route-path-one-or-more-named-parameters', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match a JS comment wrapped by quotes', () => {
+    const warning = check('"/* foo */"')
+    expect(warning).toBe(null)
+  })
+
   it('does not match "/foo/bar/baz"', () => {
     const warning = check('"/foo/bar/baz"')
     expect(warning).toBe(null)
