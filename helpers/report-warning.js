@@ -2,12 +2,13 @@
 
 var chalk = require('chalk')
 var migrationGuideUrlFor = require('./migration-guide-url-for')
+var parentFolderNameFor = require('./parent-folder-name-for')
 
 var warningCount = 0
 module.exports = function (fileData, warning, rule) {
   warningCount++
 
-  var library = rule.file.match(/([^\/\\]+)[\/\\][^\/\\]+\.js/)[1]
+  var library = parentFolderNameFor(rule.file)
 
   console.log()
   console.log(chalk.yellow(
