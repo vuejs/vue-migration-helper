@@ -13,13 +13,17 @@ var rules = recursiveReadSync(rulesPath)
       file.indexOf('.spec') === -1
     )
   })
-  .map(require)
+  .map(function (file) {
+    var rule = require(file)
+    rule.file = file
+    return rule
+  })
 
 module.exports = function (fileData) {
   return rules.some(function (rule) {
     var warning = assertRule(fileData, rule)
     if (warning) {
-      reportWarning(fileData, warning)
+      reportWarning(fileData, warning, rule)
       return true
     }
     return false
