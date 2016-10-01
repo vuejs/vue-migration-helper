@@ -2,7 +2,7 @@
 
 const reportWarning = require('./report-warning')
 
-describe('Helper: report-summary', () => {
+describe('Helper: report-warning', () => {
   it('prints the correct output for a simple deprecation', () => {
     const stdout = catchLog(() => {
       reportWarning({
@@ -22,7 +22,7 @@ describe('Helper: report-summary', () => {
 1. ddd
   Line bbb: /foo/bar/baz.js
   Reason: ccc
-  More info: http://rc.vuejs.org/guide/migration-yyy.html#eee`)
+  More info: http://vuejs.org/guide/migration-yyy.html#eee`)
   })
 
   it('prints the correct output for a simple vue deprecation', () => {
@@ -44,6 +44,6 @@ describe('Helper: report-summary', () => {
 2. ddd
   Line bbb: /foo/bar/baz.js
   Reason: ccc
-  More info: http://rc.vuejs.org/guide/migration.html#eee`)
+  More info: http://vuejs.org/guide/migration.html#eee`)
   })
 })
