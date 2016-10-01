@@ -7,7 +7,7 @@ var warningCount = 0
 module.exports = function (fileData, warning, rule) {
   warningCount++
 
-  var library = rule.file.match(/([^\/]+)\/[^\/]+\.js/)[1]
+  var library = rule.file.match(/([^\/\\]+)[\/\\][^\/\\]+\.js/)[1]
 
   console.log()
   console.log(chalk.yellow(
