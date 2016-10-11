@@ -1,8 +1,8 @@
 'use strict'
 
-const check = createRuleChecker('vue/vue-dependency')
+const check = createRuleChecker('vue-router/vue-router-dependency')
 
-describe('Rule: vue-dependency', () => {
+describe('Rule: vue-router-dependency', () => {
   it('does not match an empty line', () => {
     const warning = check('')
     expect(warning).toBe(null)
@@ -10,28 +10,28 @@ describe('Rule: vue-dependency', () => {
 
   it('does not match "^2.0.0"', () => {
     const warning = check(`
-      "vue": "^2.0.0"
+      "vue-router": "^2.0.0"
     `)
     expect(warning).toBe(null)
   })
 
   it('does not match "^2.0.0" with comma', () => {
     const warning = check(`
-      "vue": "^2.0.0",
+      "vue-router": "^2.0.0",
     `)
     expect(warning).toBe(null)
   })
 
   it('does not match "^2.0.1"', () => {
     const warning = check(`
-      "vue": "^2.0.1"
+      "vue-router": "^2.0.1"
     `)
     expect(warning).toBe(null)
   })
 
   it('does not match "2.0.0"', () => {
     const warning = check(`
-      "vue": "2.0.0"
+      "vue-router": "2.0.0"
     `)
     expect(warning).toBe(null)
   })
@@ -43,35 +43,35 @@ describe('Rule: vue-dependency', () => {
     expect(warning).toBe(null)
   })
 
-  it('matches "^1.0.27"', () => {
+  it('matches "^0.7.13"', () => {
     const warning = check(`
-      "vue": "^1.0.27"
+      "vue-router": "^0.7.13"
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace "vue": "^1.0.27" with "vue": "^2.0.0", then run: npm install')
+    expect(warning.fix).toBe('Replace "vue-router": "^0.7.13" with "vue-router": "^2.0.0", then run: npm install')
   })
 
-  it('matches "^1.0.27" with comma', () => {
+  it('matches "^0.7.13" with comma', () => {
     const warning = check(`
-      "vue": "^1.0.27",
+      "vue-router": "^0.7.13",
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace "vue": "^1.0.27" with "vue": "^2.0.0", then run: npm install')
+    expect(warning.fix).toBe('Replace "vue-router": "^0.7.13" with "vue-router": "^2.0.0", then run: npm install')
   })
 
-  it('matches "1.0.27"', () => {
+  it('matches "0.7.13"', () => {
     const warning = check(`
-      "vue": "1.0.27",
+      "vue-router": "0.7.13",
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace "vue": "1.0.27" with "vue": "^2.0.0", then run: npm install')
+    expect(warning.fix).toBe('Replace "vue-router": "0.7.13" with "vue-router": "^2.0.0", then run: npm install')
   })
 
-  it('matches "0.12.1"', () => {
+  it('matches "0.7.0"', () => {
     const warning = check(`
-      "vue": "0.12.1",
+      "vue-router": "0.7.0",
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace "vue": "0.12.1" with "vue": "^2.0.0", then run: npm install')
+    expect(warning.fix).toBe('Replace "vue-router": "0.7.0" with "vue-router": "^2.0.0", then run: npm install')
   })
 })
