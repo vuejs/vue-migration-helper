@@ -13,11 +13,6 @@ describe('Rule: router-lifecycle-hooks', () => {
     expect(warning).toBe(null)
   })
 
-  it('does not match activated:', () => {
-    const warning = check('activated:')
-    expect(warning).toBe(null)
-  })
-
   it('matches activate with ES5 function', () => {
     const warning = check(`
       activate: function () {

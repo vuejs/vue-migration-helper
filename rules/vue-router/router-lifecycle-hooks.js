@@ -2,19 +2,39 @@
 
 var chalk = require('chalk')
 
+const hookReplacements = {
+  activate: 'beforeRouteEnter',
+  canActivate: 'beforeEnter',
+  deactivate: 'beforeDestroy',
+  canDeactivate: 'beforeRouteLeave'
+}
+
+const extraInfo = {
+  activate: 'in the component',
+  canActivate: 'in the route',
+  deactivate: '(or ' + chalk.green('destroyed') + ') in the component',
+  canDeactivate: 'in the component'
+}
+
 module.exports = {
-  pattern: /\bdata\s*?(?::|\()/,
+  pattern: new RegExp(
+    '\\b(' +
+    Object.keys(hookReplacements).join('|') +
+    ')\\s*?(?::|\\()'
+  ),
   warning: function (match, hook) {
+    const replacementHook = hookReplacements[hook]
+    const info = extraInfo[hook]
     return {
-      reason: 'The data route lifecycle hook has been deprecated',
+      reason: 'The ' + hook + ' router lifecycle hook has been deprecated',
       fix: (
-        'Replace ' + chalk.red('data') + ' with ' +
+        'Replace ' + chalk.red(hook) + ' with ' +
         (replacementHook.indexOf(' ') === -1
           ? chalk.green(replacementHook)
           : replacementHook) + ' ' +
         (info || '')
       ),
-      docsHash: 'data-deprecated'
+      docsHash: hook + '-deprecated'
     }
   }
 }
