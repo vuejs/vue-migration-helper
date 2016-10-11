@@ -13,7 +13,7 @@ describe('Rule: vue-partial', () => {
       Vue.partial('foo', {
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace Vue.partial(\'foo\') with a functional component')
+    expect(warning.fix).toBe('Replace Vue.partial(\'foo\') with a normal component that receives props - or a functional component in performance-critical situations')
   })
 
   it('matches a partial declaration with double quotes', () => {
@@ -21,6 +21,6 @@ describe('Rule: vue-partial', () => {
       Vue.partial("foo", {
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace Vue.partial("foo") with a functional component')
+    expect(warning.fix).toBe('Replace Vue.partial("foo") with a normal component that receives props - or a functional component in performance-critical situations')
   })
 })
