@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /\bsubRoutes\s*?:/,
+  pattern: /\bsubRoutes\b/,
   warning: function (match) {
     return {
       reason: 'subRoutes has been renamed to children for consistency within Vue and with other routing libraries',
