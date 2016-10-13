@@ -20,7 +20,7 @@ glob(folders, {
   ignore: [
     '**/.git/**/*',
     '**/node_modules/**/*',
-    '**/*.+(jpeg|jpg|gif|png|svg|woff|woff2|ttf|otf|eot|log|zip|map)'
+    '**/*.+(jpeg|jpg|gif|png|svg|woff|woff2|ttf|otf|eot|log|zip|map|tar|gz)'
   ]
 }, function (error, files) {
   if (error) throw error
