@@ -21,7 +21,7 @@ describe('Rule: transition-on-load', () => {
   it('matches "transitionOnLoad"', () => {
     const warning = check('transitionOnLoad')
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('arst')
+    expect(warning.fix).toBe('Remove the transitionOnLoad option')
   })
 
   it('matches "transitionOnLoad:"', () => {
@@ -29,7 +29,7 @@ describe('Rule: transition-on-load', () => {
       transitionOnLoad:
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('arst')
+    expect(warning.fix).toBe('Remove the transitionOnLoad option')
   })
 
   it('matches "transitionOnLoad :"', () => {
@@ -37,6 +37,6 @@ describe('Rule: transition-on-load', () => {
       transitionOnLoad :
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('arst')
+    expect(warning.fix).toBe('Remove the transitionOnLoad option')
   })
 })
