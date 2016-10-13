@@ -13,24 +13,25 @@ describe('Rule: subroutes', () => {
     expect(warning).toBe(null)
   })
 
-  it('does not match "subroutes"', () => {
-    const warning = check('subroutes')
-    expect(warning).toBe(null)
+  it('matches "subRoutes"', () => {
+    const warning = check('subRoutes')
+    expect(warning).toBeTruthy()
+    expect(warning.fix).toBe('Replace subRoutes with children and update its routes to the new array syntax')
   })
 
-  it('matches "subroutes:"', () => {
+  it('matches "subRoutes:"', () => {
     const warning = check(`
-      subroutes:
+      subRoutes:
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace subroutes with children and update its routes to the new array syntax')
+    expect(warning.fix).toBe('Replace subRoutes with children and update its routes to the new array syntax')
   })
 
-  it('matches "subroutes :"', () => {
+  it('matches "subRoutes :"', () => {
     const warning = check(`
-      subroutes :
+      subRoutes :
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace subroutes with children and update its routes to the new array syntax')
+    expect(warning.fix).toBe('Replace subRoutes with children and update its routes to the new array syntax')
   })
 })
