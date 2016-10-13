@@ -1,6 +1,6 @@
 'use strict'
 
-const check = createRuleChecker('vue/vuex-dependency')
+const check = createRuleChecker('vuex/vuex-dependency')
 
 describe('Rule: vuex-dependency', () => {
   it('does not match an empty line', () => {
@@ -50,7 +50,7 @@ describe('Rule: vuex-dependency', () => {
     expect(warning).toBe(null)
   })
 
-  it('does not match vue-loader "1.0.0"', () => {
+  it('does not match vue-loader "0.6.0"', () => {
     const warning = check(`
       "vue-loader": "0.6.0"
     `)
@@ -81,11 +81,11 @@ describe('Rule: vuex-dependency', () => {
     expect(warning.fix).toBe('Replace "vuex": "0.0.27" with "vuex": "^1.0.0", then run: npm install')
   })
 
-  it('matches "0.12.1"', () => {
+  it('matches "0.6.1"', () => {
     const warning = check(`
-      "vuex": "0.12.1",
+      "vuex": "0.6.1",
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace "vuex": "0.12.1" with "vuex": "^1.0.0", then run: npm install')
+    expect(warning.fix).toBe('Replace "vuex": "0.6.1" with "vuex": "^1.0.0", then run: npm install')
   })
 })

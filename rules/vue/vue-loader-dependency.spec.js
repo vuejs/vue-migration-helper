@@ -36,35 +36,35 @@ describe('Rule: vue-loader-dependency', () => {
     expect(warning).toBe(null)
   })
 
-  it('does not match vuex "1.0.0"', () => {
+  it('does not match vuex "9.0.0"', () => {
     const warning = check(`
-      "vuex": "1.0.0"
+      "vuex": "9.0.0"
     `)
     expect(warning).toBe(null)
   })
 
-  it('matches "^1.0.27"', () => {
+  it('matches "^7.1.5"', () => {
     const warning = check(`
-      "vue-loader": "^1.0.27"
+      "vue-loader": "^7.1.5"
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace "vue-loader": "^1.0.27" with "vue-loader": "^9.0.0", then run: npm install')
+    expect(warning.fix).toBe('Replace "vue-loader": "^7.1.5" with "vue-loader": "^9.0.0", then run: npm install')
   })
 
-  it('matches "^1.0.27" with comma', () => {
+  it('matches "^7.1.5" with comma', () => {
     const warning = check(`
-      "vue-loader": "^1.0.27",
+      "vue-loader": "^7.1.5",
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace "vue-loader": "^1.0.27" with "vue-loader": "^9.0.0", then run: npm install')
+    expect(warning.fix).toBe('Replace "vue-loader": "^7.1.5" with "vue-loader": "^9.0.0", then run: npm install')
   })
 
-  it('matches "1.0.27"', () => {
+  it('matches "7.1.5"', () => {
     const warning = check(`
-      "vue-loader": "1.0.27",
+      "vue-loader": "7.1.5",
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace "vue-loader": "1.0.27" with "vue-loader": "^9.0.0", then run: npm install')
+    expect(warning.fix).toBe('Replace "vue-loader": "7.1.5" with "vue-loader": "^9.0.0", then run: npm install')
   })
 
   it('matches "0.12.1"', () => {

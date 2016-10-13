@@ -6,7 +6,7 @@ module.exports = {
   pattern: /("vue-loader"\s*:\s*)"[^\d"]*?[^9]\.\d+\.\d+"/,
   warning: function (match, preVersion) {
     return {
-      reason: 'If you are using pre-9.0 vue-loader through NPM, you have to update it in your package.json file',
+      reason: 'vue-loader 9.0 is the earliest supported version compatible with Vue 2.0',
       fix: (
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green(
