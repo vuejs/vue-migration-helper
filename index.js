@@ -9,13 +9,13 @@ var checkForDeprecations = require('./helpers/check-for-deprecations')
 var printSummary = require('./helpers/print-summary')
 
 var args = process.argv.slice(2)
-var folders = args.length
+var filesAndOrFolders = args.length
   ? args.length === 1
-    ? args + '/**/*'
-    : '{' + args.join(',') + '}/**/*'
+    ? args + '{/**/*,}'
+    : '{' + args.join(',') + '}{/**/*,}'
   : '**/*'
 
-glob(folders, {
+glob(filesAndOrFolders, {
   nodir: true,
   ignore: [
     '**/.git/**/*',
