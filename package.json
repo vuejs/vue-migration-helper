@@ -18,6 +18,8 @@
     "graceful-fs": "^4.1.6",
     "lodash.camelcase": "^4.3.0",
     "recursive-readdir-sync": "^1.0.6",
+    "request": "^2.75.0",
+    "semver": "^5.3.0",
     "split": "^1.0.0"
   },
   "devDependencies": {
@@ -25,6 +27,7 @@
     "eslint-config-vue": "git://github.com/vuejs/eslint-config-vue.git#1e91889",
     "eslint-plugin-vue": "git://github.com/vuejs/eslint-plugin-vue.git#6a3a6db",
     "jasmine": "2.4.1",
+    "rewire": "^2.5.2",
     "strip-ansi": "^3.0.1"
   },
   "eslintConfig": {
@@ -36,6 +39,9 @@
       "it": false,
       "fit": false,
       "expect": false,
+      "beforeEach": false,
+      "afterEach": false,
+      "spyOn": false,
       "createRuleChecker": true,
       "runMigrationHelper": true,
       "catchLog": true
