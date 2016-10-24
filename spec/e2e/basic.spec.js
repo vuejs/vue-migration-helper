@@ -34,3 +34,12 @@ describe('scanning a simple js file', () => {
   })
 })
 
+describe('scanning a directory of files with matching but ignorable warnings', () => {
+  it('completes without error', () => {
+    const result = runMigrationHelper(['ignorable'])
+    expect(result.error).toBe(undefined)
+    expect(result.stderr).toBe('')
+    expect(result.stdout).toContain('No deprecated patterns detected')
+  })
+})
+

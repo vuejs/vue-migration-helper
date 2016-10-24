@@ -19,10 +19,38 @@ var rules = recursiveReadSync(rulesPath)
     return rule
   })
 
+var styleExtensions = [
+  'css', 'postcss', 'scss', 'sass', 'styl', 'stylus', 'less'
+]
+
+var ignorableExtensions = {
+  template: styleExtensions,
+  js: styleExtensions,
+  style: ['js']
+}
+
+function fileHasExtension (file, extension) {
+  return path.extname(file).slice(1) === extension
+}
+
+function shouldIgnoreWarning (file, warning) {
+  // type: package.json
+  if (
+    warning.type === 'package.json' &&
+    path.basename(file) !== warning.type
+  ) {
+    return true
+  } else {
+    return ignorableExtensions[warning.type].some(function (extension) {
+      return fileHasExtension(file, extension)
+    })
+  }
+}
+
 module.exports = function (fileData) {
   return rules.some(function (rule) {
     var warning = assertRule(fileData, rule)
-    if (warning) {
+    if (warning && !shouldIgnoreWarning(fileData.file, warning)) {
       reportWarning(fileData, warning, rule)
       return true
     }
