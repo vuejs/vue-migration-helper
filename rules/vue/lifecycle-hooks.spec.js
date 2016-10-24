@@ -20,6 +20,13 @@ describe('Rule: lifecycle-hooks', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match a normal init function declaration', () => {
+    const warning = check(`
+      function init() {
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('matches beforeCompile with ES5 function', () => {
     const warning = check(`
       beforeCompile: function () {
