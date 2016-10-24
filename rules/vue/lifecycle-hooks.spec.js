@@ -13,6 +13,13 @@ describe('Rule: lifecycle-hooks', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match ready in text with parentheses after it', () => {
+    const warning = check(`
+      blah blah ready (blah blah)
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('matches beforeCompile with ES5 function', () => {
     const warning = check(`
       beforeCompile: function () {
