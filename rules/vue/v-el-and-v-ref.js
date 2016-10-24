@@ -12,7 +12,8 @@ module.exports = {
         'Update ' + chalk.red(match) + ' to ' +
         chalk.green('ref="' + camelCase(name) + '"')
       ),
-      docsHash: 'v-el-and-v-ref-deprecated'
+      docsHash: 'v-el-and-v-ref-deprecated',
+      type: 'template'
     }
   }
 }

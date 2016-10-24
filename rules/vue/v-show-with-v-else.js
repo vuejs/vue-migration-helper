@@ -11,7 +11,8 @@ module.exports = {
         'Replace ' + chalk.red('v-else') + ' with a ' +
         chalk.green('v-if') + ' negation expression'
       ),
-      docsHash: 'v-else-with-v-show-deprecated'
+      docsHash: 'v-else-with-v-show-deprecated',
+      type: 'template'
     }
   }
 }

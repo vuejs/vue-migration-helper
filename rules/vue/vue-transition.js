@@ -13,7 +13,8 @@ module.exports = {
         chalk.green('<transition-group>') +
         ' element as its root'
       ),
-      docsHash: 'Vue-transition-for-Reusable-Transitions-deprecated'
+      docsHash: 'Vue-transition-for-Reusable-Transitions-deprecated',
+      type: 'js'
     }
   }
 }

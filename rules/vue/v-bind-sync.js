@@ -12,7 +12,8 @@ module.exports = {
         chalk.green(vBindPrefix + boundProp + '=' + value) +
         ', then $emit an event from the child component to trigger an update to ' + value.replace(/['"]/g, '') + ' in the parent'
       ),
-      docsHash: 'v-bind-with-once-and-sync-Modifiers-deprecated'
+      docsHash: 'v-bind-with-once-and-sync-Modifiers-deprecated',
+      type: 'template'
     }
   }
 }

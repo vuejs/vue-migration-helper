@@ -12,7 +12,8 @@ module.exports = {
         chalk.green('children') +
         ' and update its routes to the new array syntax'
       ),
-      docsHash: 'subRoutes-deprecated'
+      docsHash: 'subRoutes-deprecated',
+      type: 'js'
     }
   }
 }

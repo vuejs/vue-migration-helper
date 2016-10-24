@@ -8,7 +8,8 @@ module.exports = {
       fix: (
         'Rewrite your Vuex middlewares as plugins (see the link below for an example)'
       ),
-      docsHash: 'Middlewares-deprecated'
+      docsHash: 'Middlewares-deprecated',
+      type: 'js'
     }
   }
 }

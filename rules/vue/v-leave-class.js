@@ -12,7 +12,8 @@ module.exports = {
         chalk.green('.' + name + '-leave-active') +
         ' (if it\'s left over from Vue 1.x)'
       ),
-      docsHash: 'Transitions'
+      docsHash: 'Transitions',
+      type: 'style'
     }
   }
 }

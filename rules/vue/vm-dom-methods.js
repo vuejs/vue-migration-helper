@@ -20,7 +20,8 @@ module.exports = {
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green(replacement)
       ),
-      docsHash: 'vm-' + method + '-deprecated'
+      docsHash: 'vm-' + method + '-deprecated',
+      type: 'js'
     }
   }
 }

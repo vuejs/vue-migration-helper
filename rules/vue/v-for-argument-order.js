@@ -11,7 +11,8 @@ module.exports = {
         'Switch argument order in ' + chalk.red(match) + ' to ' +
         chalk.green('(' + itemVar + ', ' + indexVar + ')')
       ),
-      docsHash: 'v-for-Argument-Order-for-Arrays'
+      docsHash: 'v-for-Argument-Order-for-Arrays',
+      type: 'template'
     }
   }
 }

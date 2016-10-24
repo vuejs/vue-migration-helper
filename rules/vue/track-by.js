@@ -18,7 +18,8 @@ module.exports = {
           '"'
         )
       ),
-      docsHash: 'track-by-deprecated'
+      docsHash: 'track-by-deprecated',
+      type: 'template'
     }
   }
 }

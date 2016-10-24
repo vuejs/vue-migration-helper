@@ -18,7 +18,7 @@ module.exports = {
     ')'
   ),
   warning: function (match, property, filter) {
-    const message = builtInFilters[filter]
+    const message = builtInFilters[filter] + ''
     return {
       reason: 'Built-in filters have been deprecated in favor of external, specialized utility libraries',
       fix: message
@@ -26,7 +26,8 @@ module.exports = {
         .replace(/\$filter/g, filter)
         .replace(/\$green\{(.+?)\}/g, chalk.green('$1'))
         .replace(/\$red\{(.+?)\}/g, chalk.red('$1')),
-      docsHash: 'Replacing-the-' + filter + '-Filter'
+      docsHash: 'Replacing-the-' + filter + '-Filter',
+      type: 'template'
     }
   }
 }

@@ -11,7 +11,8 @@ module.exports = {
         'Replace ' + chalk.red(routerMap) + ' with ' +
         'an array on the new routes option (see link below for details)'
       ),
-      docsHash: 'router-map-deprecated'
+      docsHash: 'router-map-deprecated',
+      type: 'js'
     }
   }
 }

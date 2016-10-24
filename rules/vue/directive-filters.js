@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Replace filtered value in ' + chalk.red(directive) + ' with a method or computed property'
       ),
-      docsHash: 'Filters-Outside-Text-Interpolations-deprecated'
+      docsHash: 'Filters-Outside-Text-Interpolations-deprecated',
+      type: 'template'
     }
   }
 }

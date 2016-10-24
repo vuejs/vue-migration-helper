@@ -8,7 +8,8 @@ module.exports = {
     return {
       reason: 'Delimiters are now a component-level option',
       fix: 'Refactor ' + chalk.red('Vue.config.delimiters') + ' to its component-level equivalent',
-      docsHash: 'Vue-config-delimiters-deprecated'
+      docsHash: 'Vue-config-delimiters-deprecated',
+      type: 'js'
     }
   }
 }

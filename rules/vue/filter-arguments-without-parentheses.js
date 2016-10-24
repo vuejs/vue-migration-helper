@@ -15,7 +15,8 @@ module.exports = {
           ')'
         )
       ),
-      docsHash: 'Filter-Argument-Syntax'
+      docsHash: 'Filter-Argument-Syntax',
+      type: 'template'
     }
   }
 }

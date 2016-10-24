@@ -15,7 +15,8 @@ module.exports = {
           '"'
         )
       ),
-      docsHash: 'Interpolation-within-Attributes'
+      docsHash: 'Interpolation-within-Attributes',
+      type: 'template'
     }
   }
 }

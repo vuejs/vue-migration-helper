@@ -11,7 +11,8 @@ module.exports = {
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green(pre + ':' + param + '+' + post)
       ),
-      docsHash: 'One-or-More-Named-Parameters'
+      docsHash: 'One-or-More-Named-Parameters',
+      type: 'js'
     }
   }
 }

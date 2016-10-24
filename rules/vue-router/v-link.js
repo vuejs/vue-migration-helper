@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Replace ' + chalk.red(match) + ' with the new <router-link> component (see link below for details)'
       ),
-      docsHash: 'v-link-deprecated'
+      docsHash: 'v-link-deprecated',
+      type: 'template'
     }
   }
 }

@@ -11,7 +11,8 @@ module.exports = {
         'Replace ' + chalk.red(routerDot + 'go') + ' with ' +
         chalk.green(routerDot + 'push')
       ),
-      docsHash: 'router-go'
+      docsHash: 'router-go',
+      type: 'js'
     }
   }
 }

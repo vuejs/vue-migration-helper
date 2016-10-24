@@ -12,7 +12,8 @@ module.exports = {
         chalk.green(routeDot + 'meta.' + property) +
         ', then also update the route option to be scoped under meta'
       ),
-      docsHash: 'Arbitrary-Route-Properties'
+      docsHash: 'Arbitrary-Route-Properties',
+      type: 'js'
     }
   }
 }

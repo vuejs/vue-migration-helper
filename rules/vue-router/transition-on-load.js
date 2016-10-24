@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Remove the ' + chalk.red('transitionOnLoad') + ' option'
       ),
-      docsHash: 'transitionOnLoad-deprecated'
+      docsHash: 'transitionOnLoad-deprecated',
+      type: 'js'
     }
   }
 }

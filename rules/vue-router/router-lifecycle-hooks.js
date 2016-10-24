@@ -23,7 +23,7 @@ module.exports = {
     ')\\s*?(?::|\\()'
   ),
   warning: function (match, hook) {
-    const replacementHook = hookReplacements[hook]
+    const replacementHook = hookReplacements[hook] + ''
     const info = extraInfo[hook]
     return {
       reason: 'The ' + hook + ' router lifecycle hook has been deprecated',
@@ -34,7 +34,8 @@ module.exports = {
           : replacementHook) + ' ' +
         (info || '')
       ),
-      docsHash: hook + '-deprecated'
+      docsHash: hook + '-deprecated',
+      type: 'js'
     }
   }
 }

@@ -26,7 +26,8 @@ module.exports = {
             'Update ' + chalk.red(match) + ' to ' +
             'use v-bind with a computed property'
           ),
-      docsHash: 'Interpolation-within-Attributes'
+      docsHash: 'Interpolation-within-Attributes',
+      type: 'template'
     }
   }
 }

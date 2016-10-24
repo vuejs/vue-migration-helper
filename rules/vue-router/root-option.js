@@ -11,7 +11,8 @@ module.exports = {
         'Rename the ' + chalk.red('root') + ' option to ' +
         chalk.green('base')
       ),
-      docsHash: 'root-deprecated'
+      docsHash: 'root-deprecated',
+      type: 'js'
     }
   }
 }

@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Remove the ' + chalk.red('hashbang') + ' option'
       ),
-      docsHash: 'hashbang-false-deprecated'
+      docsHash: 'hashbang-false-deprecated',
+      type: 'js'
     }
   }
 }

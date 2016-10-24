@@ -8,7 +8,8 @@ module.exports = {
       fix: (
         'Update store.watch to use a function rather than a string path for the first argument (see link below for an example)'
       ),
-      docsHash: 'store-watch-with-String-Property-Path-deprecated'
+      docsHash: 'store-watch-with-String-Property-Path-deprecated',
+      type: 'js'
     }
   }
 }

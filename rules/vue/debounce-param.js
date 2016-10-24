@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Delete ' + chalk.red(match) + ' and wrap the expensive operation(s) you want to throttle with lodash\'s debounce or throttle functions (see the link below for an example)'
       ),
-      docsHash: 'v-model-with-debounce-deprecated'
+      docsHash: 'v-model-with-debounce-deprecated',
+      type: 'template'
     }
   }
 }

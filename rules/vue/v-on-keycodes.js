@@ -11,7 +11,8 @@ module.exports = {
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green('Vue.config.keyCodes')
       ),
-      docsHash: 'Vue-directive-39-on-39-keyCodes-deprecated'
+      docsHash: 'Vue-directive-39-on-39-keyCodes-deprecated',
+      type: 'js'
     }
   }
 }

@@ -13,7 +13,8 @@ module.exports = {
           vm + '.' + property
         )
       ),
-      docsHash: 'vm-get-deprecated'
+      docsHash: 'vm-get-deprecated',
+      type: 'js'
     }
   }
 }

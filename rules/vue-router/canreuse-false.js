@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Remove the ' + chalk.red('canReuse') + ' option'
       ),
-      docsHash: 'canReuse-false-deprecated'
+      docsHash: 'canReuse-false-deprecated',
+      type: 'js'
     }
   }
 }

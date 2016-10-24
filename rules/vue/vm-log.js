@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Delete ' + chalk.red(match) + ' and install the Vue Devtools instead: ' + chalk.underline.green('https://github.com/vuejs/vue-devtools')
       ),
-      docsHash: 'vm-log-deprecated'
+      docsHash: 'vm-log-deprecated',
+      type: 'js'
     }
   }
 }

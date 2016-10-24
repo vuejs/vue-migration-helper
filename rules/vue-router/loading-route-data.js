@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Replace ' + chalk.red('$loadingRouteData') + ' with a reactive property that you define (see the link below for an example)'
       ),
-      docsHash: 'loadingRouteData-deprecated'
+      docsHash: 'loadingRouteData-deprecated',
+      type: 'js'
     }
   }
 }

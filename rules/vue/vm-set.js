@@ -17,7 +17,8 @@ module.exports = {
           ')'
         )
       ),
-      docsHash: 'vm-set'
+      docsHash: 'vm-set',
+      type: 'js'
     }
   }
 }

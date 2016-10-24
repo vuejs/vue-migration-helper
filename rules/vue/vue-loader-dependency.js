@@ -14,7 +14,8 @@ module.exports = {
         ) +
         ', then run: npm install'
       ),
-      docsHash: ''
+      docsHash: '',
+      type: 'package.json'
     }
   }
 }

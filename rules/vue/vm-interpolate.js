@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Replace ' + chalk.red(match) + ' with a solution using normal JavaScript'
       ),
-      docsHash: 'vm-interpolate-deprecated'
+      docsHash: 'vm-interpolate-deprecated',
+      type: 'js'
     }
   }
 }

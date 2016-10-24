@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Replace the ' + chalk.red('data') + ' route hook with a watcher that reacts to $route changes'
       ),
-      docsHash: 'data-deprecated'
+      docsHash: 'data-deprecated',
+      type: 'js'
     }
   }
 }

@@ -11,7 +11,8 @@ module.exports = {
         'Replace ' + chalk.red('saveScrollPosition') + ' with the new ' +
         chalk.green('scrollBehavior') + ' option, which takes a function (see the link below for examples)'
       ),
-      docsHash: 'saveScrollPosition-deprecated'
+      docsHash: 'saveScrollPosition-deprecated',
+      type: 'js'
     }
   }
 }

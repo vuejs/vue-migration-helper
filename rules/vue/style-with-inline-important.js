@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Remove !important from ' + chalk.red(match)
       ),
-      docsHash: 'v-bind-style-with-Object-Syntax-and-important-deprecated'
+      docsHash: 'v-bind-style-with-Object-Syntax-and-important-deprecated',
+      type: 'template'
     }
   }
 }

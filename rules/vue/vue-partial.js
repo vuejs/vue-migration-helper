@@ -10,7 +10,8 @@ module.exports = {
       fix: (
         'Replace ' + chalk.red('Vue.partial(' + name + ')') + ' with a normal component that receives props - or a functional component in performance-critical situations'
       ),
-      docsHash: 'Vue-partial-deprecated'
+      docsHash: 'Vue-partial-deprecated',
+      type: 'js'
     }
   }
 }
