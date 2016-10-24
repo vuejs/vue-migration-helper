@@ -57,6 +57,13 @@ describe('Rule: router-lifecycle-data', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match activate in text with parentheses after it', () => {
+    const warning = check(`
+      blah blah data (blah blah)
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('matches data with ES2015 arrow function and one argument', () => {
     const warning = check(`
       data: foo => {

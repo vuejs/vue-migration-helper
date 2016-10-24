@@ -18,7 +18,7 @@ const extraInfo = {
 
 module.exports = {
   pattern: new RegExp(
-    '\\b(' +
+    '^\\s*(' +
     Object.keys(hookReplacements).join('|') +
     ')\\s*?(?::|\\()'
   ),
