@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /<[\w-]+\s+.*?(v-model[\.\w-:]*)=["'\b](.+?)["'\b].*\s(lazy|number).*?>/,
+  pattern: /<[\w-]+\s+.*?(v-model[\.\w-:]*)=["'\b](.+?)["'\b].*\s(lazy|number)[\s>].*?>?/,
   warning: function (match, vModelAttr, vModelValue, param) {
     return {
       reason: 'v-model attribute params have been removed in favor of simpler modifier syntax',

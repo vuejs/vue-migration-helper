@@ -22,6 +22,13 @@ describe('Rule: lazy-and-number-params', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match number at the end of the value of an attribute', () => {
+    const warning = check(`
+      <input v-model="userPhone" placeholder="Phone number">
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('matches a simple number param', () => {
     const warning = check(`
       <input v-model="foo" number>
