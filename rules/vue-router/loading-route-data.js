@@ -6,11 +6,11 @@ module.exports = {
   pattern: /\$loadingRouteData/,
   warning: function (match) {
     return {
-      reason: 'The same results can now be achieved with normal reactive properties, so it\'s been deprecated',
+      reason: 'The same results can now be achieved with normal reactive properties, so it\'s been removed',
       fix: (
         'Replace ' + chalk.red('$loadingRouteData') + ' with a reactive property that you define (see the link below for an example)'
       ),
-      docsHash: 'loadingRouteData-deprecated',
+      docsHash: 'loadingRouteData',
       type: 'js'
     }
   }

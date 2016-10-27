@@ -1,6 +1,6 @@
 # vue-migration-helper <sup>`RC`</sup>
 
-> CLI tool to aid in migration from Vue 1.x to 2.0. It scans files for Vue-specific code and provides detailed warnings when deprecated patterns are found.
+> CLI tool to aid in migration from Vue 1.x to 2.0. It scans files for Vue-specific code and provides detailed warnings when deprecated patterns are found. It cannot reliably catch _every_ deprecation, but should get you 80% of the way there.
 
 ![Screenshot](http://i.imgur.com/aHh5TfR.png)
 
@@ -17,6 +17,8 @@ cd path/to/my-vue-project
 vue-migration-helper
 # scan all files in specific sub-directories
 vue-migration-helper src folder-a folder-b
+# scan a specific file or files
+vue-migration-helper src/app.vue
 ```
 
 When you want to update, just run the install again:

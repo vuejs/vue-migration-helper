@@ -6,7 +6,7 @@ module.exports = {
   pattern: /(\.([\w-]+)-transition)[^\w-]/,
   warning: function (match, cssClass, name) {
     return {
-      reason: 'v-transition class has been deprecated to standardize on the same classes as Angular and React CSSTransitionGroup',
+      reason: 'v-transition class has been replaced by the standard classes used by Angular and React CSSTransitionGroup',
       fix: (
         'Replace ' + chalk.red(cssClass) + ' with ' +
         chalk.green(
@@ -14,7 +14,7 @@ module.exports = {
           '.' + name + '-leave-active'
         )
       ),
-      docsHash: 'transition-Attribute-deprecated',
+      docsHash: 'transition-Attribute',
       type: 'style'
     }
   }

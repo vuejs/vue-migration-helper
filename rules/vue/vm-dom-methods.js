@@ -15,12 +15,12 @@ module.exports = {
       remove: vm + '.$el.remove()'
     }[method]
     return {
-      reason: 'vm.$' + method + ' has been deprecated in favor of simply using the native DOM API on vm.$el',
+      reason: 'vm.$' + method + ' has been removed in favor of simply using the native DOM API on vm.$el',
       fix: (
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green(replacement)
       ),
-      docsHash: 'vm-' + method + '-deprecated',
+      docsHash: 'vm-' + method + '',
       type: 'js'
     }
   }

@@ -11,7 +11,7 @@ module.exports = {
         'Replace ' + chalk.red(routerAlias) + ' with ' +
         'an alias option in a route definition (see link below for details)'
       ),
-      docsHash: 'router-alias-deprecated',
+      docsHash: 'router-alias',
       type: 'js'
     }
   }

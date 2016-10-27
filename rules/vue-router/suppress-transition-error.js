@@ -10,7 +10,7 @@ module.exports = {
       fix: (
         'Remove the ' + chalk.red('suppressTransitionError') + ' option'
       ),
-      docsHash: 'suppressTransitionError-deprecated',
+      docsHash: 'suppressTransitionError',
       type: 'js'
     }
   }

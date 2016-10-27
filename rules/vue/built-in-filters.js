@@ -20,7 +20,7 @@ module.exports = {
   warning: function (match, property, filter) {
     const message = builtInFilters[filter] + ''
     return {
-      reason: 'Built-in filters have been deprecated in favor of external, specialized utility libraries',
+      reason: 'Built-in filters have been removed in favor of external, specialized utility libraries',
       fix: message
         .replace(/\$property/g, property)
         .replace(/\$filter/g, filter)

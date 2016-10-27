@@ -3,7 +3,7 @@ describe('scanning empty directory', () => {
     const result = runMigrationHelper(['empty'])
     expect(result.error).toBe(undefined)
     expect(result.stderr).toBe('')
-    expect(result.stdout).toContain('No deprecated patterns detected')
+    expect(result.stdout).toContain('No obsolete syntax was detected')
   })
 })
 
@@ -12,7 +12,7 @@ describe('scanning directory with an empty file', () => {
     const result = runMigrationHelper(['empty-file'])
     expect(result.error).toBe(undefined)
     expect(result.stderr).toBe('')
-    expect(result.stdout).toContain('No deprecated patterns detected')
+    expect(result.stdout).toContain('No obsolete syntax was detected')
   })
 })
 
@@ -39,7 +39,7 @@ describe('scanning a directory of files with matching but ignorable warnings', (
     const result = runMigrationHelper(['ignorable'])
     expect(result.error).toBe(undefined)
     expect(result.stderr).toBe('')
-    expect(result.stdout).toContain('No deprecated patterns detected')
+    expect(result.stdout).toContain('No obsolete syntax was detected')
   })
 })
 

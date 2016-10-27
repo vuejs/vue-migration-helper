@@ -6,7 +6,7 @@ module.exports = {
   pattern: /\b([\w-:@\.]+)="([^"=]*?)\{\{(.+?)\}\}([^"=]*?)"/,
   warning: function (match, attribute, prefixString, value, suffixString) {
     return {
-      reason: 'Interpolation within attributes has been deprecated',
+      reason: 'Interpolation within attributes has been removed',
       fix: suffixString.indexOf('{{') === -1 && suffixString.indexOf('}}') === -1
         ? (
             'Update ' + chalk.red(match) + ' to ' +

@@ -15,7 +15,7 @@ module.exports = {
         ) +
         ' and declare ' + formattedProperty + ' in the data option with an initial value'
       ),
-      docsHash: 'Vue-set-and-Vue-delete-on-Vue-instances-deprecated',
+      docsHash: 'Vue-set-and-Vue-delete-on-Vue-instances',
       type: 'js'
     }
   }

@@ -25,7 +25,7 @@ module.exports = {
     const replacementHook = hookReplacements[hook] + ''
     const info = extraInfo[hook]
     return {
-      reason: hook + ' lifecycle hook has been deprecated',
+      reason: hook + ' lifecycle hook has been removed',
       fix: (
         'Replace ' + chalk.red(hook) + ' with ' +
         (replacementHook.indexOf(' ') === -1
@@ -33,7 +33,7 @@ module.exports = {
           : replacementHook) +
         (info || '')
       ),
-      docsHash: hook + '-deprecated',
+      docsHash: hook + '',
       type: 'js'
     }
   }

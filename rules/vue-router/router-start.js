@@ -12,7 +12,7 @@ module.exports = {
         chalk.green('router: router') +
         ' on your root Vue instance (see link below for details)'
       ),
-      docsHash: 'router-start-deprecated',
+      docsHash: 'router-start',
       type: 'js'
     }
   }

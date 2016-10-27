@@ -10,7 +10,7 @@ module.exports = {
     return {
       reason: 'v-for iterated primitives are no longer supported in v-model',
       fix: 'Replace ' + chalk.red(vFor) + ' with an array of objects, then update ' + chalk.red(vModel) + ' to bind to a property on each object',
-      docsHash: 'v-model-with-v-for-Iterated-Primitive-Values-deprecated',
+      docsHash: 'v-model-with-v-for-Iterated-Primitive-Values',
       type: 'template'
     }
   }

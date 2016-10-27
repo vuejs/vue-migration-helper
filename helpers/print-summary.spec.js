@@ -14,6 +14,6 @@ describe('Helper: print-summary', () => {
     const stdout = catchLog(() => {
       printSummary(false)
     })
-    expect(stdout).toContain('No deprecated patterns detected.')
+    expect(stdout).toContain('No obsolete syntax was detected.')
   })
 })

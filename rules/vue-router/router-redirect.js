@@ -11,7 +11,7 @@ module.exports = {
         'Replace ' + chalk.red(routerRedirect) + ' with ' +
         'a redirect option in a route definition (see link below for details)'
       ),
-      docsHash: 'router-redirect-deprecated',
+      docsHash: 'router-redirect',
       type: 'js'
     }
   }

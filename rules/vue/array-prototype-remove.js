@@ -6,7 +6,7 @@ module.exports = {
   pattern: /([\w+\.]+?)\.\$remove\s*?\(([\w\.]+?)\)/,
   warning: function (match, array, itemToRemove) {
     return {
-      reason: 'Array extensions for the reactivity system have been deprecated',
+      reason: 'Array extensions for the reactivity system have been removed',
       fix: (
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green(
@@ -14,7 +14,7 @@ module.exports = {
           array + '.splice(index, 1)'
         )
       ),
-      docsHash: 'Array-prototype-remove-deprecated',
+      docsHash: 'Array-prototype-remove',
       type: 'js'
     }
   }

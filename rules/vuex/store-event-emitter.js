@@ -14,7 +14,7 @@ module.exports = {
       fix: (
         'Replace ' + chalk.red(match) + ' with ' + replacement + ' (see the link below for details)'
       ),
-      docsHash: 'Store’s-Event-Emitter-deprecated',
+      docsHash: 'Store’s-Event-Emitter',
       type: 'js'
     }
   }

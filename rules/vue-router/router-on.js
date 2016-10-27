@@ -11,7 +11,7 @@ module.exports = {
         'Replace ' + chalk.red(routerOn) + ' with ' +
         'a route that\'s dynamically added to the routes array (see link below for details)'
       ),
-      docsHash: 'router-on-deprecated',
+      docsHash: 'router-on',
       type: 'js'
     }
   }

@@ -6,7 +6,7 @@ module.exports = {
   pattern: /([\w+\.]+?)\.\$set\s*?\(([\w\s\.\[\]]+?),([^,]+?)\)/,
   warning: function (match, array, indexArg, newValueArg) {
     return {
-      reason: 'Array extensions for the reactivity system have been deprecated',
+      reason: 'Array extensions for the reactivity system have been removed',
       fix: (
         'Replace ' + chalk.red(match) + ' with ' +
         chalk.green(
@@ -17,7 +17,7 @@ module.exports = {
           ')'
         )
       ),
-      docsHash: 'Array-prototype-set-deprecated',
+      docsHash: 'Array-prototype-set',
       type: 'js'
     }
   }

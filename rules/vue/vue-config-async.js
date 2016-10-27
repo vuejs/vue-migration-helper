@@ -8,7 +8,7 @@ module.exports = {
     return {
       reason: 'Async is now always required for performance',
       fix: 'Delete references to ' + chalk.red('Vue.config.async'),
-      docsHash: 'Vue-config-async-deprecated',
+      docsHash: 'Vue-config-async',
       type: 'js'
     }
   }
