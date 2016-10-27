@@ -23,6 +23,16 @@ describe('Rule: arbitrary-route-properties', () => {
     expect(warning).toBe(null)
   })
 
+  it('does not match "foo-route.bar"', () => {
+    const warning = check('foo-route.bar')
+    expect(warning).toBe(null)
+  })
+
+  it('does not match "foo-route.bar"', () => {
+    const warning = check('foo-route.bar')
+    expect(warning).toBe(null)
+  })
+
   it('does not match "route.redirect"', () => {
     const warning = check('route.query')
     expect(warning).toBe(null)
