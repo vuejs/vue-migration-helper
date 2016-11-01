@@ -43,3 +43,21 @@ describe('scanning a directory of files with matching but ignorable warnings', (
   })
 })
 
+describe('scanning a directory that includes weird extensions', () => {
+  it('completes without error', () => {
+    const result = runMigrationHelper(['weird-extension'])
+    expect(result.error).toBe(undefined)
+    expect(result.stderr).toBe('')
+    expect(result.stdout).toContain('No obsolete syntax was detected')
+  })
+})
+
+describe('scanning a directory that includes package.json', () => {
+  it('completes without error', () => {
+    const result = runMigrationHelper(['package-json'])
+    expect(result.error).toBe(undefined)
+    expect(result.stderr).toBe('')
+    expect(result.stdout).toContain('No obsolete syntax was detected')
+  })
+})
+
