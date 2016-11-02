@@ -13,7 +13,7 @@ describe('All rule warnings', () => {
     files.forEach(file => {
       const rule = require(file)
       expect(rule.warning('', '', '', '', '').type)
-        .toMatch(/(js|template|style|package\.json)/)
+        .toMatch(/^(js|template|style|package\.json)$/)
     })
   })
 })

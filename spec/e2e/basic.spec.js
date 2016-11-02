@@ -57,7 +57,7 @@ describe('scanning a directory that includes package.json', () => {
     const result = runMigrationHelper(['package-json'])
     expect(result.error).toBe(undefined)
     expect(result.stderr).toBe('')
-    expect(result.stdout).toContain('No obsolete syntax was detected')
+    expect(result.stdout).toContain('Line 3:')
   })
 })
 

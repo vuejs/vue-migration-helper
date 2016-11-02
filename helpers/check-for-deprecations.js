@@ -34,11 +34,8 @@ function fileHasExtension (file, extension) {
 }
 
 function shouldIgnoreWarning (file, warning) {
-  if (
-    warning.type === 'package.json' &&
-    path.basename(file) !== warning.type
-  ) {
-    return true
+  if (warning.type === 'package.json') {
+    return path.basename(file) !== warning.type
   } else {
     return ignorableExtensions[warning.type].some(function (extension) {
       return fileHasExtension(file, extension)
