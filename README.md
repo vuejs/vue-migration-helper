@@ -8,7 +8,7 @@
 
 ``` sh
 # install
-npm install --global git://github.com/vuejs/vue-migration-helper.git
+npm install --global vue-migration-helper
 
 # navigate to a Vue 1.x project directory
 cd path/to/my-vue-project
@@ -24,7 +24,7 @@ vue-migration-helper src/app.vue
 When you want to update, just run the install again:
 
 ``` sh
-npm install --global git://github.com/vuejs/vue-migration-helper.git
+npm install --global vue-migration-helper
 ```
 
 ## Contributing
