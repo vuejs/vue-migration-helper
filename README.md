@@ -1,4 +1,4 @@
-# vue-migration-helper <sup>`RC`</sup>
+# vue-migration-helper
 
 > CLI tool to aid in migration from Vue 1.x to 2.0. It scans files for Vue-specific code and provides detailed warnings when deprecated patterns are found. It cannot reliably catch _every_ deprecation, but should get you 80% of the way there.
 
