@@ -23,6 +23,7 @@
     "split": "^1.0.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "^3.4.0",
     "eslint-config-vue": "git://github.com/vuejs/eslint-config-vue.git#1e91889",
     "eslint-plugin-vue": "git://github.com/vuejs/eslint-plugin-vue.git#6a3a6db",
