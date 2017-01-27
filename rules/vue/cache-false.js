@@ -6,8 +6,8 @@ module.exports = {
   pattern: /\bcache\s*?:\s*?false\b/,
   warning: function (match) {
     return {
-      reason: 'The cache option has been deprecated, as it can be used methods',
-      fix: ('Replace the ' + chalk.red(match) + ' option with your component method'),
+      reason: 'The cache option on computed properties has been deprecated, as it\'s better to simply use a method instead',
+      fix: 'Refactor the computed property into a method',
       docsHash: 'cache-false',
       type: 'js'
     }
