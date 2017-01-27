@@ -18,7 +18,7 @@ describe('Rule: cache-false', () => {
       cache: false,
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace the cache: false option with your component method')
+    expect(warning.fix).toBe('Refactor the computed property into a method')
   })
 
   it('matches "cache:false,"', () => {
@@ -26,7 +26,7 @@ describe('Rule: cache-false', () => {
       cache:false,
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace the cache:false option with your component method')
+    expect(warning.fix).toBe('Refactor the computed property into a method')
   })
 
   it('matches "cache: false,"', () => {
@@ -34,6 +34,6 @@ describe('Rule: cache-false', () => {
       cache : false,
     `)
     expect(warning).toBeTruthy()
-    expect(warning.fix).toBe('Replace the cache : false option with your component method')
+    expect(warning.fix).toBe('Refactor the computed property into a method')
   })
 })
