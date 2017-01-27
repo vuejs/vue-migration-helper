@@ -23,9 +23,9 @@
     "split": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.4.0",
-    "eslint-config-vue": "git://github.com/vuejs/eslint-config-vue.git#1e91889",
-    "eslint-plugin-vue": "git://github.com/vuejs/eslint-plugin-vue.git#6a3a6db",
+    "eslint": "^3.14.1",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-vue": "^2.0.0",
     "jasmine": "2.4.1",
     "rewire": "^2.5.2",
     "strip-ansi": "^3.0.1"
