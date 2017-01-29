@@ -23,6 +23,8 @@ require('./helpers/check-if-outdated')(function () {
       '**/node_modules/**/*',
       '**/tmp/**/*',
       '**/vendor/**/*',
+      '**/cache/**/*',
+      '**/logs/**/*',
       '**/dist/**/*',
       '**/*.+(jpeg|jpg|gif|png|svg|woff|woff2|ttf|otf|eot|log|zip|map|tar|gz|db|sqlite|sqlite3)'
     ]
