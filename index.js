@@ -21,8 +21,10 @@ require('./helpers/check-if-outdated')(function () {
     ignore: [
       '**/.git/**/*',
       '**/node_modules/**/*',
+      '**/tmp/**/*',
+      '**/vendor/**/*',
       '**/dist/**/*',
-      '**/*.+(jpeg|jpg|gif|png|svg|woff|woff2|ttf|otf|eot|log|zip|map|tar|gz)'
+      '**/*.+(jpeg|jpg|gif|png|svg|woff|woff2|ttf|otf|eot|log|zip|map|tar|gz|db|sqlite|sqlite3)'
     ]
   }, function (error, files) {
     if (error) throw error
