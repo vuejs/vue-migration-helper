@@ -39,4 +39,11 @@ describe('Rule: v-for-implicit-index-and-key', () => {
     expect(warning).toBeTruthy()
     expect(warning.fix).toBe('Rename $key to key and explicity declare it (e.g. v-for="(value, key) in object")')
   })
+
+  it('does not match other words', () => {
+    const warning = check(`
+      {{ $keyword }}
+    `)
+    expect(warning).toBe(null)
+  })
 })

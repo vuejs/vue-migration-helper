@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /\$(index|key)/,
+  pattern: /\$(index|key)\b/,
   warning: function (match) {
     const exampleVFor = match === '$index'
       ? 'v-for="(item, index) in items"'
