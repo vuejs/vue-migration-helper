@@ -26,7 +26,8 @@ require('./helpers/check-if-outdated')(function () {
       '**/cache/**/*',
       '**/logs/**/*',
       '**/dist/**/*',
-      '**/*.+(jpeg|jpg|gif|png|svg|woff|woff2|ttf|otf|eot|log|zip|map|tar|gz|db|sqlite|sqlite3)'
+      '**/*.+(jpeg|jpg|gif|png|svg|woff|woff2|ttf|otf|eot|log|zip|map|tar|gz|db|sqlite|sqlite3)',
+      '**/(G|g)ulpfile.js'
     ]
   }, function (error, files) {
     if (error) throw error
