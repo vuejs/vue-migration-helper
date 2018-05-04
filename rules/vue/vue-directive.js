@@ -10,7 +10,7 @@ module.exports = {
       fix: (
         'Check ' + chalk.red('Vue.directive(' + name + ')') + ' to make sure its syntax has been updated and for anything beyond simple DOM manipulations, refactor to a component'
       ),
-      docsHash: 'Custom-Directives',
+      docsHash: 'Custom-Directives-simplified',
       type: 'js'
     }
   }
