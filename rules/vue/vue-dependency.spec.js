@@ -36,6 +36,20 @@ describe('Rule: vue-dependency', () => {
     expect(warning).toBe(null)
   })
 
+  it('is not limited to pre 3.0 versions', () => {
+    const warning = check(`
+      "vue": "3.0.0"
+    `)
+    expect(warning).toBe(null)
+  })
+
+  it('is not limited to pre 3.0 versions, with comma', () => {
+    const warning = check(`
+      "vue": "3.0.0",
+    `)
+    expect(warning).toBe(null)
+  })
+
   it('does not match vuex "1.0.0"', () => {
     const warning = check(`
       "vuex": "1.0.0"
