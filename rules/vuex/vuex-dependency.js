@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /("vuex"\s*:\s*)"[^\d"]*?[^1-2]\.\d+\.\d+"/,
+  pattern: /("vuex"\s*:\s*)"[^\d"]*?[^1-9]\.\d+\.\d+"/,
   warning: function (match, preVersion) {
     return {
       reason: 'Vuex 1.0 is the earliest supported version compatible with Vue 2.0',

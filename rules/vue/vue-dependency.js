@@ -3,7 +3,7 @@
 var chalk = require('chalk')
 
 module.exports = {
-  pattern: /("vue"\s*:\s*)"[^\d"]*?[^2]\.\d+\.\d+"/,
+  pattern: /("vue"\s*:\s*)"[^\d"]*?[^2-9]\.\d+\.\d+"/,
   warning: function (match, preVersion) {
     return {
       reason: 'If you are using pre-2.0 Vue through NPM, you have to update it in your package.json file',
